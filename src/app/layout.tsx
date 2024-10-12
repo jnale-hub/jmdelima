@@ -4,6 +4,8 @@ import "./globals.css";
 import StarsCanvas from "./components/StarBackground";
 import Glow from "./components/Glow";
 import { Inter } from 'next/font/google'
+import { GoogleAnalytics } from '@next/third-parties/google'
+
 import { siteConfig } from "./config";
 
 const geistSans = localFont({
@@ -49,6 +51,7 @@ export default function RootLayout({
         <Glow />
         {children}
       </body>
+      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS || ""} />
     </html>
   );
 }
