@@ -21,7 +21,7 @@ export default function ProjectCard({
     link,
 }: TProps) {
     return (
-        <Link href={link} target="_blank" className="hover:scale-105 hover:bg-[rgb(255,255,255,0.05)] rounded-lg transition-all duration-300 hover:p-4 mb-4">
+        <Link href={link} target="_blank" className="lg:hover:scale-105 lg:hover:bg-[rgb(255,255,255,0.05)] lg:hover:p-4 rounded-lg transition-all duration-300 mb-4">
             <div className="flex items-center gap-2">
                 <Image src={logo} alt={title} width={32} height={32} />
                 <h2 className="text-slate-100 text-sm font-bold">{title}</h2>
