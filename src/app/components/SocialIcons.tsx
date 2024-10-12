@@ -1,15 +1,19 @@
 import Link from "next/link";
 import { siteConfig } from "../config";
-import { slideInFromLeft } from "../utils/motion";
+import { slideInFromLeft, slideInFromTop } from "../utils/motion";
 import MotionDiv from "./MotionDiv";
 
-export default function SocialIcons() {
+type TProps = {
+    isSticky?: boolean;
+};
+
+export default function SocialIcons({ isSticky }: TProps) {
     return (
         <MotionDiv
-            variants={slideInFromLeft(1)}
+            variants={isSticky ? slideInFromLeft(1) : slideInFromTop(1)}
             initial="hidden"
             animate="visible"
-            className="w-full pt-12 lg:pt-0 lg:pl-1"
+            className={`w-full lg:pt-0 lg:pl-1 ${!isSticky ? 'lg:hidden py-4' : 'pt-12'}`}
         >
             <ul className="flex justify-center lg:justify-start gap-4">
                 {siteConfig.socialLinks.map((link) => (

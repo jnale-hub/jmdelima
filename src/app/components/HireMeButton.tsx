@@ -16,7 +16,11 @@ const email = siteConfig.socialLinks.find((link) =>
     link.url.includes("mailto")
 )?.url;
 
-export default function HireMeButton() {
+type TProps = {
+    isSticky?: boolean;
+};
+
+export default function HireMeButton({ isSticky }: TProps) {
     return (
         <MotionDiv
             variants={slideInFromLeft(1)}
@@ -25,9 +29,9 @@ export default function HireMeButton() {
         >
             <Link
                 href={email || ""}
-                className="lg:mt-12 lg:w-full flex justify-center lg:justify-start"
+                className={`lg:mt-12 lg:w-full flex justify-center lg:justify-start ${!isSticky && 'lg:hidden'} `}
             >
-                <div className="relative w-32 h-10 overflow-hidden p-[1px] rounded-sm">
+                <div className="relative w-32 h-10 overflow-hidden p-[1px] rounded-sm hover:scale-110 transition-all duration-300 ease-in-out">
                     <motion.div
                         animate={{
                             background: gradients,

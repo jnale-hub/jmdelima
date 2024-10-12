@@ -12,7 +12,7 @@ export default function ExperienceCard({
     description,
 }: TProps) {
     return (
-        <div className="w-full px-4 sm:px-0 mb-8 lg:mb-12 lg:grid grid-cols-4">
+        <div className="w-full mb-8 lg:mb-12 lg:grid grid-cols-4">
             <p className="text-slate-400 text-xs !mb-2">{duration}</p>
             <div className="col-span-3">
                 <h2 className="text-slate-100 text-sm font-bold">{company}</h2>

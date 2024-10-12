@@ -13,7 +13,7 @@ export default function Projects() {
         >
             <section
                 id="projects"
-                className="w-full flex flex-wrap justify-center lg:justify-start mb-8 lg:mb-12"
+                className="w-full flex flex-wrap justify-center lg:justify-start mb-8 lg:mb-0"
             >
                 <SectionLabel label="PROJECTS" />
                 <div className="w-full flex flex-wrap gap-4">

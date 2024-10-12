@@ -8,6 +8,7 @@ import Projects from "./components/Projects";
 import { siteConfig } from "./config";
 import TableOfContents from "./components/TableOfContents";
 import HireMeButton from "./components/HireMeButton";
+import Footer from "./components/Footer";
 
 export default function Home() {
     const jsonLd = {
@@ -33,14 +34,20 @@ export default function Home() {
                             className="pl-1 text-center lg:text-start text-xs lg:text-sm mt-4 min-h-20 max-w-[500px] text-slate-350"
                         />
                         <TableOfContents />
-                        <HireMeButton />
+                        <HireMeButton isSticky />
                     </div>
-                    <SocialIcons />
+                    <div>
+                        <SocialIcons isSticky />
+                        <Footer isSticky />
+                    </div>
                 </header>
-                <main className="w-full lg:w-1/2 px-4 sm:px-0 pt-20 lg:pt-40 lg:pl-6 text-slate-350 text-sm flex flex-wrap justify-center lg:block">
+                <main className="w-full lg:w-1/2 px-4 sm:px-0 pt-20 lg:pt-40 lg:pl-6 text-slate-350 text-sm flex flex-wrap justify-center lg:block lg:mb-40">
                     <AboutMe />
                     <Experiences />
                     <Projects />
+                    <HireMeButton />
+                    <Footer />
+                    <SocialIcons />
                 </main>
             </section>
         </main>
