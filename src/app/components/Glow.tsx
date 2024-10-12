@@ -9,7 +9,7 @@ export default function Glow() {
     const onMouseMove = (e: MouseEvent) => {
       const x = e.clientX
       const y = e.clientY
-      ref.current!.style.background = `radial-gradient(600px at ${x}px ${y}px, rgba(6, 12, 211, 0.1), transparent 80%)`
+      ref.current!.style.background = `radial-gradient(600px at ${x}px ${y}px, rgba(32, 12, 121, 0.3), transparent 80%)`
     }
 
     if (ref.current) {
@@ -22,7 +22,7 @@ export default function Glow() {
 
   return (
     <div
-      className="pointer-events-none fixed inset-0 z-30 transition duration-300 glow"
+      className="pointer-events-none fixed inset-0 -z-10 transition duration-300 glow"
       ref={ref}
     />
   )
