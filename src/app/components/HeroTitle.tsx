@@ -20,7 +20,7 @@ export default function HeroTitle() {
                 animate="visible"
                 className="text-lg sm:text-xl md:text-2xl font-medium text-center lg:text-start"
             >
-                Hey there, I'm Aurora! 👋
+                Hey there, I'm Alvin! 👋
             </motion.h1>
             <motion.h1
                 variants={slideInFromLeft(0.6)}
