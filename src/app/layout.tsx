@@ -4,6 +4,7 @@ import "./globals.css";
 import StarsCanvas from "./components/StarBackground";
 import Glow from "./components/Glow";
 import { Inter } from 'next/font/google'
+import { siteConfig } from "./config";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -19,8 +20,19 @@ const geistMono = localFont({
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: "Aurora Portfolio",
-  description: "Aurora Portfolio",
+  title: siteConfig.title,
+  description: siteConfig.description,
+  keywords: siteConfig.keywords,
+  alternates: {
+    canonical: siteConfig.url,
+  },
+  openGraph: {
+    title: siteConfig.title,
+    description: siteConfig.description,
+    url: siteConfig.url,
+    type: "website",
+    siteName: siteConfig.title,
+  }
 };
 
 export default function RootLayout({

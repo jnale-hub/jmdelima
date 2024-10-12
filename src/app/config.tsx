@@ -6,10 +6,11 @@ import { SiTypescript, SiShadcnui, SiPrisma, SiWoocommerce } from "react-icons/s
 import { GrGraphQl } from "react-icons/gr";
 
 export const siteConfig = {
-    name: "Aurora",
-    title: "Aurora - Software Engineer",
-    description: "Delivering the best",
-    url: "https://aurora.com",
+    name: "Alvin Chang",
+    title: "Alvin Chang | Full-Stack Developer",
+    description: "Alvin Chang is a web developer who builds scalable, user-centric applications using Next.js, WordPress, and other frameworks. With a focus on performance, accessibility, and clean code, Alvin creates digital solutions that are both functional and aesthetically pleasing.",
+    keywords: "Alvin Chang, full-stack developer, web development, Next.js, WordPress, React, Node.js, scalable applications, clean code",
+    url: "https://alvinchang.dev",
     taglines: [
         "🚀 Coding Simplicity, Crafting Solutions: Bringing Ideas to Life, One Line at a Time. ✨ Let's transform challenges into digital possibilities with precision and creativity!",
         "🎨 Where Code Meets Creativity: Building Digital Experiences that Matter. 🌐 From intuitive interfaces to powerful backend systems, I create solutions that engage and inspire.",
