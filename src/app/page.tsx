@@ -18,27 +18,13 @@ export default function Home() {
                     <div>
                         <HeroTitle />
                         <TitleList titles={siteConfig.titles} />
-                        <MotionDiv
-                            variants={slideInFromLeft(0.8)}
-                            initial="hidden"
-                            animate="visible"
-                            className="w-full flex justify-center lg:justify-start"
-                        >
-                            <DynamicTagline
-                                taglines={siteConfig.taglines}
-                                className="pl-1 text-center lg:text-start text-sm mt-4 min-h-28 max-w-[500px] text-slate-350"
-                            />
-                        </MotionDiv>
+                        <DynamicTagline
+                            taglines={siteConfig.taglines}
+                            className="pl-1 text-center lg:text-start text-sm mt-4 min-h-28 max-w-[500px] text-slate-350"
+                        />
                         <TableOfContents />
                     </div>
-                    <MotionDiv
-                        variants={slideInFromLeft(1)}
-                        initial="hidden"
-                        animate="visible"
-                        className="w-full pt-2 lg:pt-0 lg:pl-1"
-                    >
-                        <SocialIcons />
-                    </MotionDiv>
+                    <SocialIcons />
                 </header>
                 <main className="w-full lg:w-1/2 px-4 sm:px-0 pt-20 lg:pt-40 lg:pl-6 text-slate-350 text-sm flex flex-wrap justify-center lg:block">
                     <AboutMe />

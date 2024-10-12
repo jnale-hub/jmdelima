@@ -2,6 +2,8 @@
 
 import { useEffect, useRef } from "react";
 import Typed from "typed.js";
+import { slideInFromLeft } from "../utils/motion";
+import MotionDiv from "./MotionDiv";
 
 type TProps = {
     taglines: string[];
@@ -27,8 +29,15 @@ export default function DynamicTagline({ taglines, className }: TProps) {
     }, [taglineRef]);
 
     return (
-        <div className={className}>
-            <span ref={taglineRef} />
-        </div>
+        <MotionDiv
+            variants={slideInFromLeft(0.8)}
+            initial="hidden"
+            animate="visible"
+            className="w-full flex justify-center lg:justify-start"
+        >
+            <div className={className}>
+                <span ref={taglineRef} />
+            </div>
+        </MotionDiv>
     );
 }
