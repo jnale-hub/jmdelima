@@ -64,7 +64,7 @@ export default function TableOfContents() {
             variants={slideInFromLeft(0.9)}
             initial="hidden"
             animate="visible"
-            className="w-full"
+            className="w-full hidden lg:block"
         >
             {siteConfig.sections.tableOfContents.map((section, index) => (
                 <Link
@@ -78,7 +78,7 @@ export default function TableOfContents() {
                     <hr className={`w-8 h-[1px] transition-all duration-300 ${
                         activeSection === section.id ? "w-16 bg-slate-100" : "bg-slate-350 group-hover:w-16"
                     }`} />
-                    <span className={`transition-all duration-300 text-xs ${
+                    <span className={`transition-all duration-300 text-[10px] tracking-widest ${
                         activeSection === section.id ? "text-slate-100 font-semibold" : "text-slate-350 group-hover:text-slate-100"
                     }`}>
                         {section.label}
