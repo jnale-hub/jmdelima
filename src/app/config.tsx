@@ -16,7 +16,7 @@ export const siteConfig = {
         "🎨 Where Code Meets Creativity: Building Digital Experiences that Matter. 🌐 From intuitive interfaces to powerful backend systems, I create solutions that engage and inspire.",
         "💡 Innovating Beyond the Screen: Crafting Seamless Digital Journeys. 🌟 From concept to completion, let’s build the future, one pixel and one line of code at a time.",
     ],
-    titles: ["Software Engineer", "Full Stack Developer", "UI/UX Designer"],
+    titles: ["Full-Stack Developer", "NextJS Developer", "Wordpress Developer"],
     socialLinks: [
         {
             icon: <FaGithub />,
