@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { siteConfig } from "../config";
 import { slideInFromLeft, slideInFromTop } from "../utils/motion";
@@ -8,9 +10,13 @@ type TProps = {
 };
 
 export default function SocialIcons({ isSticky }: TProps) {
+    let isMobile = false;
+    if (typeof window !== "undefined") {
+        isMobile = window.matchMedia("(max-width: 1024px)").matches;
+    }
     return (
         <MotionDiv
-            variants={isSticky ? slideInFromLeft(1) : slideInFromTop(1)}
+            variants={isMobile ? slideInFromTop(1) : slideInFromLeft(1)}
             initial="hidden"
             animate="visible"
             className={`w-full lg:pt-0 lg:pl-1 ${!isSticky ? 'lg:hidden py-4' : 'pt-12'}`}

@@ -2,7 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import Typed from "typed.js";
-import { slideInFromLeft } from "../utils/motion";
+import { slideInFromLeft, slideInFromTop } from "../utils/motion";
 import MotionDiv from "./MotionDiv";
 
 type TProps = {
@@ -11,6 +11,10 @@ type TProps = {
 };
 
 export default function DynamicTagline({ taglines, className }: TProps) {
+    let isMobile = false;
+    if (typeof window !== "undefined") {
+        isMobile = window.matchMedia("(max-width: 1024px)").matches;
+    }
     const taglineRef = useRef<HTMLParagraphElement>(null);
 
     useEffect(() => {
@@ -30,7 +34,7 @@ export default function DynamicTagline({ taglines, className }: TProps) {
 
     return (
         <MotionDiv
-            variants={slideInFromLeft(0.8)}
+            variants={isMobile ? slideInFromTop(0.8) : slideInFromLeft(0.8)}
             initial="hidden"
             animate="visible"
             className="w-full flex justify-center lg:justify-start"

@@ -1,9 +1,13 @@
 'use client'
 
 import { motion } from "framer-motion";
-import { slideInFromLeft } from "../utils/motion";
+import { slideInFromLeft, slideInFromTop } from "../utils/motion";
 
 export default function TitleList({ titles }: { titles: string[] }) {
+    let isMobile = false;
+    if (typeof window !== "undefined") {
+        isMobile = window.matchMedia("(max-width: 1024px)").matches;
+    }
     // Define arrays of colors for text and background
     const textColors = ["text-orange-500", "text-pink-500", "text-purple-500"];
     const bgColors = ["bg-orange-950", "bg-pink-950", "bg-purple-950"];
@@ -13,7 +17,7 @@ export default function TitleList({ titles }: { titles: string[] }) {
             {titles.map((title, index) => (
                 <motion.li
                     key={title}
-                    variants={slideInFromLeft(0.8 + index * 0.2)}
+                    variants={isMobile ? slideInFromTop(0.8 + index * 0.2) : slideInFromLeft(0.8 + index * 0.2)}
                     initial="hidden"
                     animate="visible"
                     className={`text-xs font-bold ${textColors[index % textColors.length]} ${bgColors[index % bgColors.length]} p-1 px-2 rounded-full flex items-center`}

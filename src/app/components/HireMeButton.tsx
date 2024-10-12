@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import { siteConfig } from "../config";
-import { slideInFromLeft } from "../utils/motion";
+import { slideInFromLeft, slideInFromTop } from "../utils/motion";
 import MotionDiv from "./MotionDiv";
 
 const gradients = [
@@ -21,9 +21,13 @@ type TProps = {
 };
 
 export default function HireMeButton({ isSticky }: TProps) {
+    let isMobile = false;
+    if (typeof window !== "undefined") {
+        isMobile = window.matchMedia("(max-width: 1024px)").matches;
+    }
     return (
         <MotionDiv
-            variants={slideInFromLeft(1)}
+            variants={isMobile ? slideInFromTop(1) : slideInFromLeft(1)}
             initial="hidden"
             animate="visible"
         >
