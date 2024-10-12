@@ -37,3 +37,12 @@ export const slideInFromTop = {
         },
     },
 };
+
+export const rotateInfinitely = {
+    rotate: [0, 360],
+    transition: {
+        duration: 2,
+        ease: "linear",
+        repeat: Infinity,
+    },
+};

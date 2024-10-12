@@ -9,7 +9,7 @@ export default function SocialIcons() {
             variants={slideInFromLeft(1)}
             initial="hidden"
             animate="visible"
-            className="w-full pt-2 lg:pt-0 lg:pl-1"
+            className="w-full pt-12 lg:pt-0 lg:pl-1"
         >
             <ul className="flex justify-center lg:justify-start gap-4">
                 {siteConfig.socialLinks.map((link) => (

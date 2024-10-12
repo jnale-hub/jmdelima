@@ -1,14 +1,13 @@
 import HeroTitle from "./components/HeroTitle";
 import DynamicTagline from "./components/DynamicTagline";
 import TitleList from "./components/TitleList";
-import MotionDiv from "./components/MotionDiv";
-import { slideInFromLeft } from "./utils/motion";
 import SocialIcons from "./components/SocialIcons";
 import AboutMe from "./components/AboutMe";
 import Experiences from "./components/Experiences";
 import Projects from "./components/Projects";
 import { siteConfig } from "./config";
 import TableOfContents from "./components/TableOfContents";
+import HireMeButton from "./components/HireMeButton";
 
 export default function Home() {
     const jsonLd = {
@@ -31,9 +30,10 @@ export default function Home() {
                         <TitleList titles={siteConfig.titles} />
                         <DynamicTagline
                             taglines={siteConfig.taglines}
-                            className="pl-1 text-center lg:text-start text-sm mt-4 min-h-28 max-w-[500px] text-slate-350"
+                            className="pl-1 text-center lg:text-start text-xs lg:text-sm mt-4 min-h-20 max-w-[500px] text-slate-350"
                         />
                         <TableOfContents />
+                        <HireMeButton />
                     </div>
                     <SocialIcons />
                 </header>
