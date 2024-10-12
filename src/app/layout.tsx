@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import StarsCanvas from "./components/StarBackground";
 import Glow from "./components/Glow";
+import { Inter } from 'next/font/google'
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -14,6 +15,8 @@ const geistMono = localFont({
   variable: "--font-geist-mono",
   weight: "100 900",
 });
+
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
   title: "Aurora Portfolio",
@@ -28,7 +31,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.className} ${geistMono.variable} antialiased bg-background text-foreground`}
+        className={`${geistSans.variable} ${geistMono.variable} ${inter.className} antialiased bg-background text-slate-100`}
       >
         <StarsCanvas />
         <Glow />
