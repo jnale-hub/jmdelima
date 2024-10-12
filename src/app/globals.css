@@ -18,3 +18,12 @@ main strong {
   :root {
 
         --radius: 0.5rem}}
+
+/* Add this to your global CSS file */
+html {
+  scroll-behavior: smooth;
+}
+
+[id] {
+  scroll-margin-top: 100px; /* Adjust this value as needed */
+}
