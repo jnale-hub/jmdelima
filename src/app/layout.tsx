@@ -8,16 +8,16 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/react";
 import { siteConfig } from "./config";
 
-const geistSans = localFont({
-    src: "./fonts/GeistVF.woff",
-    variable: "--font-geist-sans",
-    weight: "100 900",
-});
-const geistMono = localFont({
-    src: "./fonts/GeistMonoVF.woff",
-    variable: "--font-geist-mono",
-    weight: "100 900",
-});
+// const geistSans = localFont({
+//     src: "./fonts/GeistVF.woff",
+//     variable: "--font-geist-sans",
+//     weight: "100 900",
+// });
+// const geistMono = localFont({
+//     src: "./fonts/GeistMonoVF.woff",
+//     variable: "--font-geist-mono",
+//     weight: "100 900",
+// });
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -45,7 +45,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body
-                className={`${geistSans.variable} ${geistMono.variable} ${inter.className} antialiased bg-background text-slate-100`}
+                className={`${inter.className} antialiased bg-background text-slate-100`}
             >
                 <StarsCanvas />
                 <Glow />
