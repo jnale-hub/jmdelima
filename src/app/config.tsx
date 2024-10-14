@@ -2,7 +2,7 @@ import { FaGithub } from "react-icons/fa";
 import { FaLinkedin, FaSquareXTwitter, FaDiscord } from "react-icons/fa6";
 import { IoIosMail } from "react-icons/io";
 import { RiNextjsFill, RiTailwindCssFill, RiOpenaiFill, RiWordpressFill } from "react-icons/ri";
-import { SiTypescript, SiShadcnui, SiPrisma, SiWoocommerce } from "react-icons/si";
+import { SiTypescript, SiShadcnui, SiPrisma, SiWoocommerce, SiReact } from "react-icons/si";
 import { GrGraphQl } from "react-icons/gr";
 
 export const siteConfig = {
@@ -82,6 +82,30 @@ export const siteConfig = {
         ],
         projects: [
             {
+                title: "Alvin Chang | Portfolio Website",
+                description: "This is my portfolio website. I built it to showcase my projects and skills. It is a static site built with Next.js, Tailwind CSS, and Shadcn/UI. I used the following technologies to build it:",
+                logo: "/logox.png",
+                technologies: [
+                    {
+                        icon: <RiNextjsFill className="text-[#FFF]" />,
+                        name: "Next.js"
+                    },
+                    {
+                        icon: <RiTailwindCssFill className="text-[#06B6D4]" />,
+                        name: "Tailwind CSS"
+                    },
+                    {
+                        icon: <SiShadcnui className="text-[#FFF]" />,
+                        name: "Shadcn/UI"
+                    },
+                    {
+                        icon: <SiTypescript className="text-[#3178C6]" />,
+                        name: "TypeScript"
+                    },
+                ],
+                link: "https://alvinchang.dev"
+            },
+            {
                 title: "Genzify AI",
                 description: "GenZify is an AI-powered tool I developed to transform everyday text into trendy Gen Z-style language. I managed both the front-end design and back-end development, integrating AI functionality for smooth and creative rephrasings. The platform delivers a fun, engaging experience, perfect for anyone looking to add a modern twist to their communication. This project highlights my skills in blending AI with user-centric design to create a playful, interactive web tool.",
                 logo: "/genzify-logo.png",
@@ -115,12 +139,12 @@ export const siteConfig = {
                 logo: "/whataboutpets-logo.png",
                 technologies: [
                     {
-                        icon: <RiWordpressFill className="text-[#21759B]" />,
-                        name: "WordPress"
-                    },
-                    {
                         icon: <RiNextjsFill className="text-[#FFF]" />,
                         name: "Next.js"
+                    },
+                    {
+                        icon: <RiWordpressFill className="text-[#21759B]" />,
+                        name: "WordPress"
                     },
                     {
                         icon: <SiTypescript className="text-[#3178C6]" />,

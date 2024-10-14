@@ -34,6 +34,14 @@ export const metadata: Metadata = {
         url: siteConfig.url,
         type: "website",
         siteName: siteConfig.title,
+        images: [
+            {
+                url: "/Portfolio.png",
+                width: 1920,
+                height: 1080,
+                alt: "Alvin Chang Portfolio",
+            },
+        ],
     },
 };
 

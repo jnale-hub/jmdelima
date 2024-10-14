@@ -30,10 +30,11 @@ export default function HireMeButton({ isSticky }: TProps) {
             variants={isMobile ? slideInFromTop(1) : slideInFromLeft(1)}
             initial="hidden"
             animate="visible"
+            className="flex justify-center lg:justify-start lg:py-6"
         >
             <Link
                 href={email || ""}
-                className={`lg:mt-12 lg:w-full flex justify-center lg:justify-start ${!isSticky && 'lg:hidden'} `}
+                className={`${!isSticky && 'lg:hidden'} `}
             >
                 <div className="relative w-32 h-10 overflow-hidden p-[1px] rounded-sm hover:scale-125 lg:hover:scale-110 transition-all duration-300 ease-in-out">
                     <motion.div
