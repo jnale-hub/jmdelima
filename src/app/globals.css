@@ -7,7 +7,7 @@
 }
 
 main p {
-  @apply mb-4 leading-7;
+  @apply mb-4 leading-6;
 }
 
 main strong {
@@ -26,4 +26,109 @@ html {
 
 [id] {
   scroll-margin-top: 100px; /* Adjust this value as needed */
+}
+
+.blog-list p {
+  @apply !line-clamp-2 !text-slate-350 !leading-normal !mb-0; 
+}
+
+/* Markdown */
+.article-content h1, .article-content h2, .article-content h3 {
+  @apply text-lg font-semibold text-slate-100 mt-6 mb-2;
+}
+
+.article-content h4, .article-content h5, .article-content h6 {
+  @apply text-sm font-semibold text-slate-200 mt-6 mb-2;
+}
+
+.article-content a { 
+  @apply text-blue-400 underline hover:text-pink-400 transition-all;
+}
+
+.article-content strong {
+  @apply font-medium
+}
+
+.article-content ul {
+  @apply list-disc list-inside ml-5;
+}
+
+.article-content li {
+  @apply mb-2 text-slate-350;
+}
+
+.article-content code {
+  @apply font-mono text-slate-350 text-xs bg-zinc-800 p-1 rounded-sm;
+}
+
+.article-content pre code {
+  @apply !bg-zinc-900 !p-4 rounded-lg shadow-md overflow-x-scroll mt-2 mb-4 block;
+}
+
+.article-content hr {
+  @apply border-slate-500 border w-full my-4;
+}
+
+.article-content p {
+  @apply mb-2;
+}
+
+/* Highlight.js */
+.hljs-comment,
+.hljs-quote {
+  @apply text-slate-500 italic;
+}
+
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-subst {
+  @apply text-purple-400;
+}
+
+.hljs-literal,
+.hljs-symbol,
+.hljs-name,
+.hljs-variable {
+  @apply text-yellow-400;
+}
+
+.hljs-string {
+  @apply text-green-400;
+}
+
+.hljs-function .hljs-title {
+  @apply text-blue-400;
+}
+
+.hljs-number {
+  @apply text-pink-400;
+}
+
+.hljs-attr,
+.hljs-attribute {
+  @apply text-teal-400;
+}
+
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-title {
+  @apply text-orange-400;
+}
+
+.hljs-meta,
+.hljs-link {
+  @apply text-indigo-400;
+}
+
+
+/* Scrollbar */
+
+/* Optional: Custom styling for the scrollbar if you ever want it back */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #444; /* Dark scrollbar thumb */
+  border-radius: 10px;
 }

@@ -9,8 +9,12 @@ import { siteConfig } from "./config";
 import TableOfContents from "./components/TableOfContents";
 import HireMeButton from "./components/HireMeButton";
 import Footer from "./components/Footer";
+import ContactForm from "./components/ContactForm";
+import { fetchBlogs } from "./utils/fetchWordpress";
+import BlogList from "./components/BlogList";
+import HomepageBlogs from "./components/HomepageBlogs";
 
-export default function Home() {
+export default async function Home() {
     const jsonLd = {
         "@context": "https://schema.org",
         "@type": "Person",
@@ -18,6 +22,8 @@ export default function Home() {
         url: siteConfig.url,
         keywords: siteConfig.keywords,
     };
+    const blogs = await fetchBlogs();
+
     return (
         <main className="w-full min-h-screen px-4 sm:px-20 xl:px-40 2xl:px-80">
             <script
@@ -41,11 +47,12 @@ export default function Home() {
                         <Footer isSticky />
                     </div>
                 </header>
-                <main className="w-full lg:w-1/2 px-4 sm:px-0 pt-20 lg:pt-40 lg:pl-6 text-slate-350 text-sm flex flex-wrap justify-center lg:block lg:mb-40">
+                <main className="w-full lg:w-1/2 px-4 sm:px-0 pt-20 lg:pt-40 text-slate-350 text-sm flex flex-wrap justify-center lg:block lg:mb-40">
                     <AboutMe />
                     <Experiences />
                     <Projects />
-                    <HireMeButton />
+                    <HomepageBlogs blogs={blogs} />
+                    <ContactForm />
                     <Footer />
                     <SocialIcons />
                 </main>
