@@ -11,7 +11,6 @@ import HireMeButton from "./components/HireMeButton";
 import Footer from "./components/Footer";
 import ContactForm from "./components/ContactForm";
 import { fetchBlogs } from "./utils/fetchWordpress";
-import BlogList from "./components/BlogList";
 import HomepageBlogs from "./components/HomepageBlogs";
 
 export default async function Home() {

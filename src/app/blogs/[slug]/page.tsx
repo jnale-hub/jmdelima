@@ -2,7 +2,6 @@ import ArticleContent from "@/app/components/ArticleContent";
 import BlogHeader from "@/app/components/BlogHeader";
 import { fetchBlog } from "@/app/utils/fetchWordpress";
 import { formatDate } from "@/app/utils/helpers";
-import ReactMarkdown from "react-markdown";
 
 type TProps = {
     params: {
@@ -12,8 +11,6 @@ type TProps = {
 
 export default async function BlogPage({ params }: TProps) {
     const blog = await fetchBlog(params.slug);
-
-    console.log(blog.content.rendered);
 
     return (
         <div className="w-full flex justify-center">
