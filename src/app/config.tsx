@@ -53,6 +53,14 @@ export const siteConfig = {
             {
                 id: "projects",
                 label: "PROJECTS"
+            }, 
+            {
+                id: "blogs",
+                label: "BLOGS"
+            },
+            {
+                id: "contact",
+                label: "CONTACT"
             }
         ],
         aboutMe: `
