@@ -9,6 +9,7 @@ export default function AboutMe() {
             variants={slideInFromRight(0.9)}
             initial="hidden"
             animate="visible"
+            className="lg:pl-6"
         >
             <section
                 id="about-me"

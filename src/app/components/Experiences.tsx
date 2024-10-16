@@ -10,6 +10,7 @@ export default function Experiences() {
             variants={slideInFromRight(1.2)}
             initial="hidden"
             animate="visible"
+            className="lg:pl-6"
         >
             <section
                 id="experiences"

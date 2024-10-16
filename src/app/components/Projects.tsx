@@ -13,9 +13,9 @@ export default function Projects() {
         >
             <section
                 id="projects"
-                className="w-full flex flex-wrap justify-center lg:justify-start mb-8 lg:mb-0"
+                className="w-full flex flex-wrap justify-center lg:justify-start mb-8 lg:mb-12"
             >
-                <SectionLabel label="PROJECTS" />
+                <SectionLabel label="PROJECTS" className="lg:pl-6" />
                 <div className="w-full flex flex-wrap gap-4">
                     {siteConfig.sections.projects.map((project, index) => (
                         <ProjectCard key={index} {...project} />

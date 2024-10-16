@@ -1,10 +1,11 @@
 type TProps = {
     label: string;
+    className?: string;
 };
 
-export default function SectionLabel({ label }: TProps) {
+export default function SectionLabel({ label, className }: TProps) {
     return (
-        <div className="w-full text-center lg:text-start mb-4 group">
+        <div className={`w-full text-center lg:text-start mb-4 group ${className}`}>
             <h2 className="text-slate-100 text-xs font-bold tracking-[0.3em] pb-2 group-hover:text-pink-400 transition-all duration-300">
                 {label}
             </h2>
