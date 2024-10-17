@@ -46,6 +46,11 @@ export default function ContactForm() {
         },
     });
 
+    let isMobile = false;
+    if (typeof window !== "undefined") {
+        isMobile = window.matchMedia("(max-width: 1024px)").matches;
+    }
+
     async function onSubmit(values: z.infer<typeof formSchema>) {
         setIsLoading(true);
         const response = await sendMail(
@@ -59,6 +64,7 @@ export default function ContactForm() {
             toast.success(response.message, {
                 description: "Your message has been sent. I will get back to you as soon as possible.",
                 duration: 5000,
+                position: isMobile ? "top-center" : "bottom-right",
                 classNames: {
                     icon: "text-green-500",
                     toast: "bg-background text-slate-100 border-slate-900",
@@ -70,6 +76,7 @@ export default function ContactForm() {
             toast.error(response.message, {
                 description: "Please try again later.",
                 duration: 5000,
+                position: isMobile ? "top-center" : "bottom-right",
                 classNames: {
                     icon: "text-red-600",
                     toast: "bg-background text-slate-100 border-slate-900",
@@ -99,7 +106,7 @@ export default function ContactForm() {
                             control={form.control}
                             name="name"
                             render={({ field }) => (
-                                <FormItem>
+                                <FormItem className="col-span-2 md:col-span-1">
                                     <FormLabel className="text-slate-100 text-xs">
                                         Name
                                     </FormLabel>
@@ -118,13 +125,13 @@ export default function ContactForm() {
                             control={form.control}
                             name="email"
                             render={({ field }) => (
-                                <FormItem>
+                                <FormItem className="col-span-2 md:col-span-1">
                                     <FormLabel className="text-slate-100 text-xs">
                                         Email
                                     </FormLabel>
                                     <FormControl>
                                         <Input
-                                            placeholder="aurora@studioaurora.io"
+                                            placeholder="alvin@studioaurora.io"
                                             {...field}
                                             className="bg-[rgba(255,255,255,0.01)] border-[rgba(255,255,255,0.1)] text-white text-xs p-2 rounded-sm focus:ring-orange-500"
                                         />

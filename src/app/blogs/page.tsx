@@ -15,7 +15,7 @@ export default async function Blogs() {
                         Fragments of my imagination
                     </p>
                 </div>
-                <BlogList blogs={blogs} />
+                {blogs ? <BlogList blogs={blogs} /> : <div className="text-center text-xs w-full mt-20">No blogs found, try refreshing the page or check back later.</div>}
             </main>
         </div>
     );
