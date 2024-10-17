@@ -58,7 +58,7 @@ html {
 }
 
 .article-content pre.wp-block-preformatted {
-  @apply rounded-lg;
+  @apply rounded-lg overflow-hidden;
 }
 
 .article-content pre code {
