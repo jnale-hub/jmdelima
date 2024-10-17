@@ -6,6 +6,7 @@ import { Send } from "lucide-react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import * as z from "zod";
+import { useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import {
@@ -19,6 +20,8 @@ import {
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import SectionLabel from "./SectionLabel";
+import { sendMail } from "../utils/sendMail";
+import { toast } from "sonner";
 
 const formSchema = z.object({
     name: z.string().min(2, {
@@ -33,6 +36,7 @@ const formSchema = z.object({
 });
 
 export default function ContactForm() {
+    const [isLoading, setIsLoading] = useState(false);
     const form = useForm<z.infer<typeof formSchema>>({
         resolver: zodResolver(formSchema),
         defaultValues: {
@@ -42,9 +46,44 @@ export default function ContactForm() {
         },
     });
 
-    function onSubmit(values: z.infer<typeof formSchema>) {
-        alert("This feature is coming soon. Please email us at alvs131313@gmail.com instead.");
-        console.log(values);
+    async function onSubmit(values: z.infer<typeof formSchema>) {
+        // setIsLoading(true);
+        // const response = await sendMail(
+        //     values.name,
+        //     values.email,
+        //     values.message
+        // );
+        // setIsLoading(false);
+
+        const response = {
+            success: false,
+            message: "Email sent successfully",
+        };
+
+        if (response && response.success) {
+            toast.success(response.message, {
+                description: "Your message has been sent. I will get back to you as soon as possible.",
+                duration: 5000,
+                classNames: {
+                    icon: "text-green-500",
+                    toast: "bg-background text-slate-100 border-slate-900",
+                    description: "text-slate-350",
+                    
+                }
+            });
+        } else if (response && !response.success) {
+            toast.error(response.message, {
+                description: "Please try again later.",
+                duration: 5000,
+                classNames: {
+                    icon: "text-red-600",
+                    toast: "bg-background text-slate-100 border-slate-900",
+                    description: "text-slate-350",
+                    
+                }
+            });
+        }
+        form.reset();
     }
 
     return (
@@ -52,7 +91,7 @@ export default function ContactForm() {
             variants={slideInFromRight(1.4)}
             initial="hidden"
             animate="visible"
-            className="lg:pl-6"
+            className="lg:pl-6 w-full"
         >
             <section className="w-full text-sm" id="contact">
                 <SectionLabel label="CONTACT" />
@@ -122,9 +161,10 @@ export default function ContactForm() {
                         <div className="col-span-2 flex justify-start">
                             <Button
                                 type="submit"
-                                className="bg-gradient-to-r from-orange-600 to-pink-600 hover:from-orange-500 hover:to-pink-500 text-white text-xs px-4 py-2 rounded-sm w-full"
+                                className="bg-gradient-to-r from-orange-600 to-pink-600 hover:from-orange-500 hover:to-pink-500 dark:text-white text-xs px-4 py-2 rounded-sm w-full"
+                                disabled={isLoading}
                             >
-                                SEND MESSAGE
+                                {isLoading ? "SENDING..." : "SEND MESSAGE"}
                                 <Send className="ml-2 h-4 w-4" />
                             </Button>
                         </div>

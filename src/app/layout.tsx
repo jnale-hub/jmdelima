@@ -7,6 +7,7 @@ import { Inter } from "next/font/google";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/react";
 import { siteConfig } from "./config";
+import { Toaster } from "sonner";
 
 // const geistSans = localFont({
 //     src: "./fonts/GeistVF.woff",
@@ -51,7 +52,7 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en">
+        <html lang="en" className="dark">
             <head>
                 <link
                     rel="icon"
@@ -77,6 +78,7 @@ export default function RootLayout({
             >
                 <StarsCanvas />
                 <Glow />
+                <Toaster />
                 {children}
             </body>
             <Analytics />

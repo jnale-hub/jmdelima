@@ -37,7 +37,7 @@ export const siteConfig = {
         },
         {
             icon: <IoIosMail />,
-            url: "mailto:alvs131313@gmail.com",
+            url: "mailto:alvin@studioaurora.io",
         },
     ],
     sections: {
