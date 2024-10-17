@@ -6,7 +6,7 @@ export default function BlogListItem({ blog, isHome }: { blog: any, isHome?: boo
     return (
         <Link
             href={`/blogs/${blog.slug}`}
-            className={`w-full ${isHome ? "pl-0 lg:pl-3" : "bg-[rgb(255,255,255,0.02)] lg:border"} p-3 rounded-md lg:hover:bg-[rgb(255,255,255,0.06)] transition-colors duration-300 group border-[rgb(255,255,255,0.02)] lg:hover:border`}
+            className={`w-full ${isHome ? "pl-0 lg:pl-3" : "bg-[rgb(255,255,255,0.02)] lg:border"} p-3 rounded-md lg:hover:bg-[rgb(255,255,255,0.06)] transition-colors duration-300 group border-[rgb(255,255,255,0.02)]`}
         >
             <div className="lg:flex justify-between items-center mb-1 lg:mb-0">
                 <div className="flex items-center group-hover:text-pink-500 transition-colors duration-300 lg:mb-1 text-slate-300">

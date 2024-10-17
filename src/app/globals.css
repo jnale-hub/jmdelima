@@ -58,11 +58,11 @@ html {
 }
 
 .article-content pre.wp-block-preformatted {
-  @apply rounded-lg overflow-hidden;
+  @apply rounded-lg overflow-hidden mt-2 mb-4;
 }
 
 .article-content pre code {
-  @apply !p-4 rounded-lg font-mono text-xs overflow-x-scroll mt-2 mb-4 block;
+  @apply !p-4 rounded-lg font-mono text-xs overflow-x-scroll block;
 }
 
 .article-content hr {
