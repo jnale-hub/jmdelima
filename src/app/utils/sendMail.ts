@@ -32,7 +32,7 @@ export async function sendMail(name: string, email: string, message: string) {
         }
 
         try {
-            // await mailTransporter.sendMail(mailDetails);
+            await mailTransporter.sendMail(mailDetails);
             return { success: true, message: "Email sent successfully" };
         } catch (error) {
             console.error("Error occurred while sending email:", error);
