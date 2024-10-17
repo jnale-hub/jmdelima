@@ -1,7 +1,7 @@
 import { formatDate } from "../utils/helpers";
 import ArticleContent from "./ArticleContent";
 
-export default function BlogContent({ blog }: { blog: any }) {
+export default function BlogContent({ blog, content }: { blog: any, content: string }) {
     return (
         <>
             <div className="p-2">
@@ -10,7 +10,7 @@ export default function BlogContent({ blog }: { blog: any }) {
                     {formatDate(blog.date)}
                 </p>
             </div>
-            <ArticleContent content={blog.content.rendered} />
+            <ArticleContent content={content} />
         </>
     );
 }

@@ -57,12 +57,12 @@ html {
   @apply mb-2 text-slate-350;
 }
 
-.article-content code {
-  @apply font-mono text-slate-350 text-xs bg-zinc-800 p-1 rounded-sm;
+.article-content pre.wp-block-preformatted {
+  @apply rounded-lg;
 }
 
 .article-content pre code {
-  @apply !bg-zinc-900 !p-4 rounded-lg shadow-md overflow-x-scroll mt-2 mb-4 block;
+  @apply !p-4 rounded-lg font-mono text-xs overflow-x-scroll mt-2 mb-4 block;
 }
 
 .article-content hr {
@@ -74,7 +74,7 @@ html {
 }
 
 /* Highlight.js */
-.hljs-comment,
+/* .hljs-comment,
 .hljs-quote {
   @apply text-slate-500 italic;
 }
@@ -118,7 +118,7 @@ html {
 .hljs-meta,
 .hljs-link {
   @apply text-indigo-400;
-}
+} */
 
 
 /* Scrollbar */
