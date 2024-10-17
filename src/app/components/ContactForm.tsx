@@ -47,20 +47,15 @@ export default function ContactForm() {
     });
 
     async function onSubmit(values: z.infer<typeof formSchema>) {
-        // setIsLoading(true);
-        // const response = await sendMail(
-        //     values.name,
-        //     values.email,
-        //     values.message
-        // );
-        // setIsLoading(false);
+        setIsLoading(true);
+        const response = await sendMail(
+            values.name,
+            values.email,
+            values.message
+        );
+        setIsLoading(false);
 
-        const response = {
-            success: false,
-            message: "Email sent successfully",
-        };
-
-        if (response && response.success) {
+            if (response && response.success) {
             toast.success(response.message, {
                 description: "Your message has been sent. I will get back to you as soon as possible.",
                 duration: 5000,
