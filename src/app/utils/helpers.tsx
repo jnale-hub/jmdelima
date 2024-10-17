@@ -1,3 +1,5 @@
+import he from "he";
+
 export function formatDate(dateString: string) {
     const date = new Date(dateString);
     return date.toLocaleDateString('en-US', {
@@ -5,4 +7,11 @@ export function formatDate(dateString: string) {
         month: 'long',
         day: 'numeric',
     });
+}
+
+export function stripHtmlAndDecode(html: string): string {
+    // Remove HTML tags
+    const textWithoutTags = html.replace(/<[^>]*>?/g, '');
+    // Decode HTML entities
+    return he.decode(textWithoutTags);
 }

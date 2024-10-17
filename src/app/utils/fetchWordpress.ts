@@ -11,7 +11,7 @@ export async function fetchBlogs() {
 }
 
 export async function fetchBlog(slug: string) {
-    const blog = await fetchHelper(`wp/v2/posts?slug=${slug}`);
+    const blog = await fetchHelper(`wp/v2/posts?slug=${slug}&_embed`);
     return blog[0];
 }
 

@@ -1,6 +1,30 @@
 import { fetchBlogs } from "../utils/fetchWordpress";
 import BlogList from "../components/BlogList";
 import BlogHeader from "../components/BlogHeader";
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+    title: "Blogs - Alvin Chang",
+    description: "Alvin Chang's Blog, fragments of my imagination",
+    keywords: "Alvin Chang, blog, nextjs, react, javascript, typescript, web development, programming",
+    alternates: {
+        canonical: "https://alvinchang.dev/blogs",
+    },
+    openGraph: {
+        title: "Blogs - Alvin Chang",
+        description: "Alvin Chang's Blog, fragments of my imagination",
+        url: "https://alvinchang.dev/blogs",
+        type: "website",
+        images: [
+            {
+                url: "/horizontal-logo.png",
+                width: 1100,
+                height: 300,
+                alt: "Alvin Chang Portfolio Logo",
+            },
+        ],
+    }
+}
 
 export default async function Blogs() {
     const blogs = await fetchBlogs();

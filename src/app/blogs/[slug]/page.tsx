@@ -3,12 +3,43 @@ import BlogHeader from "@/app/components/BlogHeader";
 import { fetchBlog } from "@/app/utils/fetchWordpress";
 import { createHighlighter } from "shiki";
 import { JSDOM } from "jsdom";
+import { Metadata } from "next";
+import { stripHtmlAndDecode } from "@/app/utils/helpers";
 
 type TProps = {
     params: {
         slug: string;
     };
 };
+
+export async function generateMetadata({ params }: TProps): Promise<Metadata> {
+    const blog = await fetchBlog(params.slug);
+
+    const description = stripHtmlAndDecode(blog.excerpt.rendered);
+    return {
+        title: blog.title.rendered + " - Alvin Chang",
+        description,
+        keywords: blog.title.rendered + ", " + blog._embedded["wp:term"][1].map((tag: any) => tag.name).join(", "),
+        alternates: {
+            canonical: `https://alvinchang.dev/blogs/${blog.slug}`,
+        },
+        openGraph: {
+            title: blog.title.rendered + " - Alvin Chang",
+            description,
+            url: `https://alvinchang.dev/blogs/${blog.slug}`,
+            type: "article",
+            siteName: "Alvin Chang",
+            images: [
+                {
+                    url: "/horizontal-logo.png",
+                    width: 1100,
+                    height: 300,
+                    alt: "Alvin Chang Portfolio Logo",
+                }
+            ]
+        }
+    };
+}
 
 export default async function BlogPage({ params }: TProps) {
     const blog = await fetchBlog(params.slug);
