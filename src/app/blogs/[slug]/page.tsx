@@ -5,6 +5,8 @@ import { createHighlighter } from "shiki";
 import { JSDOM } from "jsdom";
 import { Metadata } from "next";
 import { stripHtmlAndDecode } from "@/app/utils/helpers";
+import Footer from "@/app/components/Footer";
+import SocialIcons from "@/app/components/SocialIcons";
 
 type TProps = {
     params: {
@@ -84,6 +86,8 @@ export default async function BlogPage({ params }: TProps) {
                 {blog && (
                     <BlogContent blog={blog} content={highlightedContent} />
                 )}
+                <Footer noAnimate/>
+                <SocialIcons noAnimate/>
             </main>
         </div>
     );

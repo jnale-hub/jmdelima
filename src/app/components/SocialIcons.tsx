@@ -7,9 +7,10 @@ import MotionDiv from "./MotionDiv";
 
 type TProps = {
     isSticky?: boolean;
+    noAnimate?: boolean
 };
 
-export default function SocialIcons({ isSticky }: TProps) {
+export default function SocialIcons({ isSticky, noAnimate }: TProps) {
     let isMobile = false;
     if (typeof window !== "undefined") {
         isMobile = window.matchMedia("(max-width: 1024px)").matches;
@@ -17,9 +18,9 @@ export default function SocialIcons({ isSticky }: TProps) {
     return (
         <MotionDiv
             variants={isMobile ? slideInFromTop(1) : slideInFromLeft(1)}
-            initial="hidden"
+            initial={noAnimate ? "visible" : "hidden"}
             animate="visible"
-            className={`w-full lg:pt-0 lg:pl-1 ${!isSticky ? 'lg:hidden py-4' : 'pt-12'}`}
+            className={`w-full lg:pt-0 lg:pl-1 ${!isSticky ? 'lg:hidden py-4' : 'pt-12'} ${noAnimate && '!flex !lg:flex justify-center p-2'}`}
         >
             <ul className="flex justify-center lg:justify-start gap-4">
                 {siteConfig.socialLinks.map((link) => (

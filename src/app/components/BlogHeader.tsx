@@ -8,7 +8,7 @@ export default function BlogHeader() {
             <Logo />
         </div>
         <nav>
-            <ul className="flex items-center text-xs font-medium gap-3">
+            <ul className="flex items-center text-xs font-medium gap-2">
                 <li className="hover:text-pink-400 transition duration-300">
                     <Link href="/">HOME</Link>
                 </li>

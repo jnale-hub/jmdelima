@@ -2,6 +2,8 @@ import { fetchBlogs } from "../utils/fetchWordpress";
 import BlogList from "../components/BlogList";
 import BlogHeader from "../components/BlogHeader";
 import { Metadata } from "next";
+import Footer from "../components/Footer";
+import SocialIcons from "../components/SocialIcons";
 
 export const metadata: Metadata = {
     title: "Blogs - Alvin Chang",
@@ -40,6 +42,8 @@ export default async function Blogs() {
                     </p>
                 </div>
                 {blogs ? <BlogList blogs={blogs} /> : <div className="text-center text-xs w-full mt-20">No blogs found, try refreshing the page or check back later.</div>}
+                <Footer noAnimate/>
+                <SocialIcons noAnimate/>
             </main>
         </div>
     );
