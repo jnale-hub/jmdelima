@@ -62,7 +62,7 @@ html {
 }
 
 .article-content pre code {
-  @apply !p-4 rounded-lg font-mono text-xs overflow-x-scroll block;
+  @apply !p-4 rounded-lg font-mono text-xs overflow-auto block;
 }
 
 .article-content hr {
@@ -72,6 +72,27 @@ html {
 .article-content p {
   @apply mb-2;
 }
+
+.article-content figure {
+  @apply rounded-sm max-w-[80%] w-fit mx-auto relative mb-2; 
+}
+
+.article-content img {
+  @apply mx-auto;
+}
+
+.article-content figcaption {
+  @apply text-slate-350 text-[10px] mb-2 text-center italic;
+}
+
+.article-content .invert img {
+  @apply !invert;
+}
+
+/* .gradient::before {
+  @apply bg-gradient-to-br from-pink-300 to-purple-600 blur-md absolute inset-0 z-[-1] content-['test'];
+} */
+
 
 /* Highlight.js */
 /* .hljs-comment,

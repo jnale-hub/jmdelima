@@ -55,8 +55,11 @@ export default async function BlogPage({ params }: TProps) {
     
         const blocks = Array.from(document.querySelectorAll("pre code"));
         await Promise.all(blocks.map(async (block: any) => {
+            block.innerHTML = block.innerHTML.replaceAll("<br>", "\n");
+            const content = block.textContent;
+
             const highlighted = await highlighter.codeToHtml(
-                block.textContent || "",
+                content || "",
                 {
                     lang: "javascript",
                     theme: "ayu-dark",
@@ -64,6 +67,9 @@ export default async function BlogPage({ params }: TProps) {
             );
             block.parentElement.innerHTML = highlighted;
         }));
+
+        // Dispose of the highlighter
+        highlighter.dispose();
     
         return document.body.innerHTML;
     };
