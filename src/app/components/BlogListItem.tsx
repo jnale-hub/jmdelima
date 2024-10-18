@@ -9,9 +9,8 @@ export default function BlogListItem({
     blog: any;
     isHome?: boolean;
 }) {
-
     const blogDate = formatDate(blog.date);
-    
+
     return (
         <Link
             href={`/blogs/${blog.slug}`}
@@ -22,16 +21,16 @@ export default function BlogListItem({
             <div className="lg:flex flex-wrap justify-between items-center">
                 <div className="flex items-center group-hover:text-pink-500 transition-colors duration-300 lg:mb-1 text-slate-300 w-full">
                     <div className="lg:max-w-[90%]">
-                        <h3 className="text-[13px] font-bold mr-1 line-clamp-1">
+                        <h3 className="text-[13px] font-bold">
                             {blog.title.rendered}
+                            <MdOutlineArrowOutward className="text-xs transition-transform duration-300 group-hover:scale-125 inline ml-1 align-middle" />
                         </h3>
                     </div>
-                    <MdOutlineArrowOutward className="text-xs transition-transform duration-300 group-hover:scale-125" />
                 </div>
                 <div className="lg:hidden">
                     <p className="text-[11px] text-slate-350 pb-1">
                         {blogDate}
-                </p>
+                    </p>
                 </div>
                 <div
                     className="text-xs text-slate-350 line-clamp-2 w-full lg:max-w-[95%]"
@@ -41,9 +40,7 @@ export default function BlogListItem({
                 />
             </div>
             <div className="hidden lg:flex justify-end flex-none">
-                <p className="text-[11px] text-slate-350">
-                    {blogDate}
-                </p>
+                <p className="text-[11px] text-slate-350">{blogDate}</p>
             </div>
         </Link>
     );
