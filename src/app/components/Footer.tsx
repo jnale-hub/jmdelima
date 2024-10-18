@@ -16,7 +16,7 @@ export default function Footer({ isSticky, noAnimate }: TProps) {
             variants={!isSticky ? slideInFromTop(1) : slideInFromLeft(1)}
             initial={noAnimate ? "visible" : "hidden"}
             animate="visible"
-            className={`text-center lg:text-left text-slate-350 text-[9px] w-full mt-8 ${noAnimate && '!block !lg:block p-2 !lg:text-center'} ${
+            className={`text-center lg:text-left text-slate-350 text-[9px] w-full mt-8 ${noAnimate && '!block lg:!block p-2 lg:!text-center'} ${
                 isSticky ? "hidden lg:block" : "lg:hidden"
             }`}
         >
