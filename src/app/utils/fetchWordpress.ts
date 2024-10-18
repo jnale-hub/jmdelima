@@ -1,3 +1,5 @@
+import { TPost } from "./types";
+
 const baseUrl = process.env.WORDPRESS_API_URL || "https://orchid-jay-598415.hostingersite.com/wp-json";
 
 export async function fetchHelper(endpoint: string) {
@@ -6,7 +8,7 @@ export async function fetchHelper(endpoint: string) {
     return data;
 }
 
-export async function fetchBlogs() {
+export async function fetchBlogs(): Promise<TPost[]> {
     return fetchHelper("wp/v2/posts");
 }
 

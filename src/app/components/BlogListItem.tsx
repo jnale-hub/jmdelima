@@ -1,12 +1,13 @@
 import { MdOutlineArrowOutward } from "react-icons/md";
 import Link from "next/link";
 import { formatDate } from "../utils/helpers";
+import { TPost } from "../utils/types";
 
 export default function BlogListItem({
     blog,
     isHome,
 }: {
-    blog: any;
+    blog: TPost;
     isHome?: boolean;
 }) {
     const blogDate = formatDate(blog.date);

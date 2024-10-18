@@ -2,8 +2,9 @@ import MotionDiv from "./MotionDiv";
 import { slideInFromRight } from "../utils/motion";
 import SectionLabel from "./SectionLabel";
 import BlogList from "./BlogList";
+import { TPost } from "../utils/types";
 
-export default function HomepageBlogs({blogs}: {blogs: any}) {
+export default function HomepageBlogs({blogs}: {blogs: TPost[]}) {
     return (
         <MotionDiv
             variants={slideInFromRight(1.2)}
