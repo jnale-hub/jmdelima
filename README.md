@@ -1,36 +1,63 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Alvin Chang's Portfolio
+
+This is a personal portfolio website for Alvin Chang, showcasing projects, blogs, and experiences as a full-stack developer. The site is built using Next.js, Tailwind CSS, and other modern web technologies.
+
+## Table of Contents
+
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Getting Started](#getting-started)
+- [Scripts](#scripts)
+- [Deployment](#deployment)
+- [Contact](#contact)
+
+## Features
+
+- **Responsive Design**: Optimized for various screen sizes.
+- **Dynamic Content**: Fetches and displays blog posts and projects.
+- **SEO Optimized**: Metadata and Open Graph tags for better search engine visibility.
+- **Contact Form**: Allows visitors to send messages directly.
+
+## Technologies Used
+
+- **Next.js**: React framework for server-side rendering and static site generation.
+- **Tailwind CSS**: Utility-first CSS framework for styling.
+- **TypeScript**: Typed superset of JavaScript for better code quality.
+- **Shiki**: Syntax highlighter for code blocks.
+- **Nodemailer**: For sending emails from the contact form.
+- **Zoho Mail**: SMTP server for email handling.
 
 ## Getting Started
 
-First, run the development server:
+To get a local copy up and running, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Prerequisites
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- Node.js and npm installed on your machine.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Installation
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/your-repo-name.git
+   ```
 
-## Learn More
+2. Navigate to the project directory:
+   ```bash
+   cd your-repo-name
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+3. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+4. Create a `.env.local` file in the root directory and add your environment variables:
+   ```plaintext
+   ZOHO_USER=your-email@domain.com
+   ZOHO_PASS=your-email-password
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Running the Development Server
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Start the development server:
