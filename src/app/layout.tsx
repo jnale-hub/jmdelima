@@ -72,6 +72,12 @@ export default function RootLayout({
                     content="AlvinChang.dev"
                 />
                 <link rel="manifest" href="/site.webmanifest" />
+                <link 
+                    rel="alternate" 
+                    type="application/rss+xml" 
+                    title={`RSS Feed for ${siteConfig.name}'s Blog`} 
+                    href="/feed.xml" 
+                />
             </head>
             <body
                 className={`${inter.className} antialiased bg-background text-slate-100`}
