@@ -7,7 +7,6 @@ import { Metadata } from "next";
 import { stripHtmlAndDecode } from "@/app/utils/helpers";
 import Footer from "@/app/components/Footer";
 import SocialIcons from "@/app/components/SocialIcons";
-import Plausible from "@/app/components/Plausible";
 
 type TProps = {
     params: {
@@ -87,7 +86,6 @@ export default async function BlogPage({ params }: TProps) {
 
     return (
         <div className="w-full flex justify-center">
-            <Plausible />
             <main className="w-full min-h-screen max-w-[600px] p-2">
                 <BlogHeader />
                 {blog && (

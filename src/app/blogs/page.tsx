@@ -4,7 +4,6 @@ import BlogHeader from "../components/BlogHeader";
 import { Metadata } from "next";
 import Footer from "../components/Footer";
 import SocialIcons from "../components/SocialIcons";
-import Plausible from "@/app/components/Plausible";
 
 export const metadata: Metadata = {
     title: "Blogs - Alvin Chang",
@@ -34,7 +33,6 @@ export default async function Blogs() {
 
     return (
         <div className="w-full flex justify-center">
-            <Plausible />
             <main className="w-full min-h-screen max-w-[600px] p-2">
                 <BlogHeader/>
                 <div className="p-2">

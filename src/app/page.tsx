@@ -12,7 +12,6 @@ import Footer from "./components/Footer";
 import ContactForm from "./components/ContactForm";
 import { fetchBlogs } from "./utils/fetchWordpress";
 import HomepageBlogs from "./components/HomepageBlogs";
-import Plausible from "./components/Plausible";
 
 export default async function Home() {
     const jsonLd = {
@@ -26,7 +25,6 @@ export default async function Home() {
 
     return (
         <main className="w-full min-h-screen px-4 sm:px-20 xl:px-40 2xl:px-80">
-            <Plausible />
             <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
 import StarsCanvas from "./components/StarBackground";
 import Glow from "./components/Glow";
@@ -8,6 +7,7 @@ import { GoogleAnalytics } from "@next/third-parties/google";
 import { Analytics } from "@vercel/analytics/react";
 import { siteConfig } from "./config";
 import { Toaster } from "sonner";
+import Plausible from "./components/Plausible";
 
 // const geistSans = localFont({
 //     src: "./fonts/GeistVF.woff",
@@ -85,6 +85,7 @@ export default function RootLayout({
                 <StarsCanvas />
                 <Glow />
                 <Toaster />
+                <Plausible />
                 {children}
             </body>
             {/* <Analytics /> */}

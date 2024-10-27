@@ -1,5 +1,5 @@
 import Script from "next/script";
 
 export default function Plausible() {
-    return <Script defer src="https://analytics.alvinchang.dev/js/script.js" />;
+    return <Script defer src={process.env.NEXT_PUBLIC_PLAUSIBLE_URL} />;
 }
