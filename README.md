@@ -2,6 +2,9 @@
 
 This is a personal portfolio website for Alvin Chang, showcasing projects, blogs, and experiences as a full-stack developer. The site is built using Next.js, Tailwind CSS, and other modern web technologies.
 
+🔗 [Live Demo](https://alvinchang.dev)
+
+
 ## Table of Contents
 
 - [Features](#features)
@@ -72,7 +75,6 @@ To get a local copy up and running, follow these steps:
 - `npm run dev`: Starts the development server.
 - `npm run build`: Builds the application for production.
 - `npm start`: Starts the production server.
-- `npm run lint`: Runs the linter.
 
 ## Deployment
 

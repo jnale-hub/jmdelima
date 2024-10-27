@@ -11,7 +11,6 @@ export async function generateSitemaps() {
 export default async function sitemap({ id }: { id: number }): Promise<MetadataRoute.Sitemap> {
     const posts = await fetchBlogs();
 
-
     return [
         {
             url: "https://alvinchang.dev",
