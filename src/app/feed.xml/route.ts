@@ -1,37 +1,46 @@
-import { NextApiRequest, NextApiResponse } from "next";
-import { fetchBlogs } from "../utils/fetchWordpress";
-import RSS from "rss"; // Ensure correct import
+import { NextResponse } from 'next/server';
+import RSS from 'rss';
+import { fetchBlogs } from '../utils/fetchWordpress';
+import { siteConfig } from '../config';
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-    try {
-        const blogs = await fetchBlogs();
+export async function GET(request: Request) {
+  const blogs = await fetchBlogs();
+  const { protocol, host } = new URL(request.url);
+  const siteUrl = `${protocol}//${host}`;
 
-        const feed = new RSS({
-            title: "Alvin Chang's Blog",
-            description: "Fragments of my imagination",
-            site_url: "https://alvinchang.dev",
-            language: "en",
-            image_url: "https://alvinchang.dev/horizontal-logo.png",
-            copyright: "All rights reserved 2023, Alvin Chang",
-            generator: "Next.js using RSS",
-            feed_url: "https://alvinchang.dev/feed.xml",
-        });
+  const feed = new RSS({
+    title: `${siteConfig.name}'s Blog`,
+    description: siteConfig.description,
+    feed_url: `${siteUrl}/feed.xml`,
+    site_url: siteUrl,
+    image_url: `${siteUrl}/logox.png`,
+    managingEditor: `${siteConfig.email} (${siteConfig.name})`,
+    webMaster: `${siteConfig.email} (${siteConfig.name})`,
+    copyright: `${new Date().getFullYear()} ${siteConfig.name}`,
+    language: 'en',
+    pubDate: new Date().toUTCString(),
+    ttl: 60,
+  });
 
-        blogs.forEach((blog) => {
-            feed.item({
-                title: blog.title.rendered,
-                guid: `https://alvinchang.dev/blogs/${blog.slug}`, // Use 'guid' instead of 'id'
-                url: `https://alvinchang.dev/blogs/${blog.slug}`, // Use 'url' for the link
-                description: blog.excerpt.rendered,
-                author: "Alvin Chang",
-                date: new Date(blog.date),
-            });
-        });
+  blogs.forEach((post) => {
+    feed.item({
+      title: post.title.rendered,
+      description: post.excerpt.rendered,
+      url: `${siteUrl}/blogs/${post.slug}`,
+      guid: `${siteUrl}/blogs/${post.slug}`,
+      categories: post.categories.map(String),
+      author: `${siteConfig.email} (${siteConfig.name})`,
+      date: new Date(post.date).toUTCString(),
+    });
+  });
 
-        res.setHeader("Content-Type", "application/rss+xml");
-        res.status(200).send(feed.xml({ indent: true })); // Use 'xml' method to generate the feed
-    } catch (error) {
-        console.error("Error generating RSS feed:", error);
-        res.status(500).json({ error: "Failed to generate RSS feed" });
-    }
+  return new NextResponse(feed.xml({ indent: true }), {
+    headers: {
+      'Content-Type': 'application/rss+xml',
+      'Cache-Control': 'max-age=0, s-maxage=3600',
+    },
+  });
 }
+
+
+

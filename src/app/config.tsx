@@ -8,6 +8,7 @@ import { GrGraphQl } from "react-icons/gr";
 export const siteConfig = {
     name: "Alvin Chang",
     title: "Alvin Chang | Full-Stack Developer",
+    email: "alvin@studioaurora.io",
     alias: "Aurora",
     description: "Alvin Chang is a web developer who builds scalable, user-centric applications using Next.js, WordPress, and other frameworks. With a focus on performance, accessibility, and clean code, Alvin creates digital solutions that are both functional and aesthetically pleasing.",
     keywords: "Alvin Chang, full-stack developer, web development, Next.js, WordPress, React, Node.js, scalable applications, clean code",
@@ -207,5 +208,5 @@ export const siteConfig = {
                 link: "https://www.ynct55.com"
             },
         ]
-    },
+    }
 };
