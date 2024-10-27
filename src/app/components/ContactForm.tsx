@@ -150,7 +150,7 @@ export default function ContactForm() {
                                     </FormLabel>
                                     <FormControl>
                                         <Textarea
-                                            placeholder="I want to request a quote for a new website design..."
+                                            placeholder="I would like to request a quote for a website design..."
                                             {...field}
                                             className="bg-[rgba(255,255,255,0.01)] border-[rgba(255,255,255,0.1)] text-white text-xs p-2 rounded-sm focus:ring-orange-500 w-full"
                                             rows={4}

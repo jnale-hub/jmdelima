@@ -81,7 +81,7 @@ export default function RootLayout({
                 <Toaster />
                 {children}
             </body>
-            <Analytics />
+            {/* <Analytics /> */}
             <GoogleAnalytics
                 gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS || ""}
             />

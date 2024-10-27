@@ -33,7 +33,7 @@ export const siteConfig = {
         },
         {
             icon: <FaDiscord />,
-            url: "https://discord.com/aurora",
+            url: "https://discord.gg/pwYGjDebkF",
         },
         {
             icon: <IoIosMail />,
@@ -66,9 +66,6 @@ export const siteConfig = {
         aboutMe: `
             <p>
                 Hi! I'm Alvin, a <strong>full-stack developer</strong> who started coding in <strong>2023</strong>. Since then, I've built <strong>streaming platforms</strong>, <strong>blogs</strong>, and <strong>e-commerce sites</strong>. Whether it’s front-end finesse or back-end logic, I love bringing ideas to life on the web.
-            </p>
-            <p>
-                Recently, I’ve been experimenting with <strong>Framer Motion</strong> for smooth animations and the <strong>OpenAI API</strong> for cool AI projects. From custom <strong>APIs with Express</strong> to impressive interfaces with <strong>Next.js</strong>—I’ve got it covered, and I also manage <strong>WordPress</strong> sites like a pro.
             </p>
             <p>
                 When I’m not coding, you’ll find me playing <strong>Dota 2</strong>, cooking up new recipes, or streaming on <strong>Kick</strong>. Let's connect—I'd love to help with your next <strong>website</strong> or <strong>API</strong> project!

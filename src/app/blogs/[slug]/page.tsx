@@ -7,6 +7,8 @@ import { Metadata } from "next";
 import { stripHtmlAndDecode } from "@/app/utils/helpers";
 import Footer from "@/app/components/Footer";
 import SocialIcons from "@/app/components/SocialIcons";
+import Plausible from "@/app/components/Plausible";
+import { Head } from "next/document";
 
 type TProps = {
     params: {
@@ -21,7 +23,10 @@ export async function generateMetadata({ params }: TProps): Promise<Metadata> {
     return {
         title: blog.title.rendered + " - Alvin Chang",
         description,
-        keywords: blog.title.rendered + ", " + blog._embedded["wp:term"][1].map((tag: any) => tag.name).join(", "),
+        keywords:
+            blog.title.rendered +
+            ", " +
+            blog._embedded["wp:term"][1].map((tag: any) => tag.name).join(", "),
         alternates: {
             canonical: `https://alvinchang.dev/blogs/${blog.slug}`,
         },
@@ -37,9 +42,9 @@ export async function generateMetadata({ params }: TProps): Promise<Metadata> {
                     width: 1100,
                     height: 300,
                     alt: "Alvin Chang Portfolio Logo",
-                }
-            ]
-        }
+                },
+            ],
+        },
     };
 }
 
@@ -54,40 +59,45 @@ export default async function BlogPage({ params }: TProps) {
         });
         const dom = new JSDOM(htmlContent);
         const document = dom.window.document;
-    
-        const blocks = Array.from(document.querySelectorAll("pre code"));
-        await Promise.all(blocks.map(async (block: any) => {
-            block.innerHTML = block.innerHTML.replaceAll("<br>", "\n");
-            const content = block.textContent;
 
-            const highlighted = await highlighter.codeToHtml(
-                content || "",
-                {
-                    lang: "javascript",
-                    theme: "ayu-dark",
-                }
-            );
-            block.parentElement.innerHTML = highlighted;
-        }));
+        const blocks = Array.from(document.querySelectorAll("pre code"));
+        await Promise.all(
+            blocks.map(async (block: any) => {
+                block.innerHTML = block.innerHTML.replaceAll("<br>", "\n");
+                const content = block.textContent;
+
+                const highlighted = await highlighter.codeToHtml(
+                    content || "",
+                    {
+                        lang: "javascript",
+                        theme: "ayu-dark",
+                    }
+                );
+                block.parentElement.innerHTML = highlighted;
+            })
+        );
 
         // Dispose of the highlighter
         highlighter.dispose();
-    
+
         return document.body.innerHTML;
     };
-    
+
     // Preprocess the content to highlight code blocks
     const highlightedContent = await highlightCodeBlocks(blog.content.rendered);
 
     return (
         <div className="w-full flex justify-center">
+            <Head>
+                <Plausible />
+            </Head>
             <main className="w-full min-h-screen max-w-[600px] p-2">
                 <BlogHeader />
                 {blog && (
                     <BlogContent blog={blog} content={highlightedContent} />
                 )}
-                <Footer noAnimate/>
-                <SocialIcons noAnimate/>
+                <Footer noAnimate />
+                <SocialIcons noAnimate />
             </main>
         </div>
     );
