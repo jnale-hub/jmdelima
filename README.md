@@ -4,6 +4,17 @@ This is a personal portfolio website for Alvin Chang, showcasing projects, blogs
 
 🔗 [Live Demo](https://alvinchang.dev)
 
+## Important Notice
+
+While this project's code is open source, please note the following:
+
+- **Attribution Required**: If you use this template for commercial purposes, attribution to Alvin Chang (https://alvinchang.dev) is required.
+- **Copyright Notice**: The following elements are copyrighted and NOT available for reuse:
+  - All logos and branding elements
+  - Blog content and articles
+  - Personal information and copy text
+  - Project descriptions and images
+- **Template Usage**: Only the code structure and implementation are available for use under the license terms.
 
 ## Table of Contents
 
@@ -80,9 +91,30 @@ To get a local copy up and running, follow these steps:
 
 This project can be deployed on platforms like Vercel, Netlify, or any other hosting service that supports Next.js applications.
 
+## Usage and Attribution
+
+### Permitted Uses
+- Use as a template for your personal portfolio
+- Study and modify the code structure
+- Implement similar features in your own projects
+
+### Requirements
+- Attribution must be provided when used commercially
+- Remove all personal branding, content, and imagery before use
+- Replace all content in `siteConfig` with your own information
+
+### Attribution Format
+When using this template commercially, please include the following attribution in your footer or credits page:
+
+```
+Template designed by Alvin Chang (https://alvinchang.dev)
+```
+
 ## License
 
-This project is open source and available under the [MIT License](LICENSE).
+This project's code structure is available under a modified MIT License with additional requirements for commercial use. See [LICENSE](LICENSE) for details.
+
+**Note**: All personal content, including but not limited to logos, blog content, and personal information, is copyrighted and not available for reuse.
 
 ## Contact
 
