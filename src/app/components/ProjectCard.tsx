@@ -24,20 +24,18 @@ export default function ProjectCard({
     repoLink,
 }: TProps) {
     return (
-        <Link
-            href={link}
-            target="_blank"
-            className=" lg:hover:bg-[rgb(255,255,255,0.05)] pl-0 lg:pl-2 p-2 rounded-lg transition-all duration-300 group"
-        >
-            <div className="flex items-center gap-2 mb-2 -translate-x-1 lg:translate-x-0">
-                <Image src={logo} alt={title} width={32} height={32} />
-                <h2 className="text-slate-100 text-sm font-bold group-hover:text-orange-500 transition-all duration-300">
-                    {title}
-                </h2>
-            </div>
-            <p className="text-slate-350 text-xs lg:text-sm lg:px-2 !mb-0">
-                {description}
-            </p>
+        <div className=" lg:hover:bg-[rgb(255,255,255,0.05)] pl-0 lg:pl-2 p-2 rounded-lg transition-all duration-300 group relative">
+            <Link href={link} target="_blank"> 
+                <div className="flex items-center gap-2 mb-2 -translate-x-1 lg:translate-x-0">
+                    <Image src={logo} alt={title} width={32} height={32} />
+                    <h2 className="text-slate-100 text-sm font-bold group-hover:text-orange-500 transition-all duration-300">
+                        {title}
+                    </h2>
+                </div>
+                <p className="text-slate-350 text-xs lg:text-sm lg:px-2 !mb-0">
+                    {description}
+                </p>
+            </Link>
             <div className="my-4 space-y-1">
                 <Link
                     href={link}
@@ -65,6 +63,6 @@ export default function ProjectCard({
                 )}
             </div>
             <ProjectTechStack technologies={technologies} />
-        </Link>
+        </div>
     );
 }
