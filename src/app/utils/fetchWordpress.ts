@@ -1,10 +1,17 @@
 import { TPost } from "./types";
 
-const baseUrl = process.env.WORDPRESS_API_URL || "https://orchid-jay-598415.hostingersite.com/wp-json";
+const baseUrl = process.env.WORDPRESS_API_URL;
+const appUsername = process.env.WORDPRESS_API_USERNAME;
+const appPassword = process.env.WORDPRESS_API_PASSWORD;
 
 export async function fetchHelper(endpoint: string) {
-    const res = await fetch(`${baseUrl}/${endpoint}`);
+    const res = await fetch(`${baseUrl}/${endpoint}`, {
+        headers: {
+            "Authorization": `Basic ${btoa(`${appUsername}:${appPassword}`)}`
+        }
+    });
     const data = await res.json();
+
     return data;
 }
 
