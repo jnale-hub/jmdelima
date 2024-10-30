@@ -12,6 +12,7 @@ import Footer from "./components/Footer";
 import ContactForm from "./components/ContactForm";
 import { fetchBlogs } from "./utils/fetchWordpress";
 import HomepageBlogs from "./components/HomepageBlogs";
+import Technologies from "./components/Technologies";
 
 export default async function Home() {
     const jsonLd = {
@@ -50,6 +51,7 @@ export default async function Home() {
                     <AboutMe />
                     <Experiences />
                     <Projects />
+                    <Technologies />
                     <HomepageBlogs blogs={blogs} />
                     <ContactForm />
                     <Footer />
