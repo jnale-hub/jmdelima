@@ -17,7 +17,6 @@ export default function AboutMe() {
             >
                 <SectionLabel label="ABOUT ME" />
             <div
-                className="max-w-[600px]"
                 dangerouslySetInnerHTML={{
                     __html: siteConfig.sections.aboutMe,
                 }}
