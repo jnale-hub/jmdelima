@@ -1,12 +1,13 @@
 import SectionLabel from "./SectionLabel";
-import MotionDiv from "./MotionDiv";
+import MotionTag from "./MotionTag";
 import { slideInFromRight } from "../utils/motion";
 import { siteConfig } from "../config";
 import ProjectCard from "./ProjectCard";
 
 export default function Projects() {
     return (
-        <MotionDiv
+        <MotionTag
+            tag="div"
             variants={slideInFromRight(1.4)}
             initial="hidden"
             animate="visible"
@@ -22,6 +23,6 @@ export default function Projects() {
                     ))}
                 </div>
             </section>
-        </MotionDiv>
+        </MotionTag>
     );
 }

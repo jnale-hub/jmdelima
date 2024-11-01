@@ -3,7 +3,7 @@
 import { siteConfig } from "../config";
 import { slideInFromRight } from "../utils/motion";
 import MainTechnology from "./MainTechnology";
-import MotionDiv from "./MotionDiv";
+import MotionTag from "./MotionTag";
 import SectionLabel from "./SectionLabel";
 import { useState } from "react";
 import TechnologyItem from "./TechnologyItem";
@@ -19,7 +19,8 @@ export default function Technologies() {
     const allTechnologies = [...technologies.main, ...technologies.other];
 
     return (
-        <MotionDiv
+        <MotionTag
+            tag="div"
             variants={slideInFromRight(1.4)}
             initial="hidden"
             animate="visible"
@@ -76,6 +77,6 @@ export default function Technologies() {
                     </button>
                 </div>
             </section>
-        </MotionDiv>
+        </MotionTag>
     );
 }

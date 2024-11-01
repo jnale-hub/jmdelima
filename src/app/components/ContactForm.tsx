@@ -1,6 +1,6 @@
 "use client";
 
-import MotionDiv from "./MotionDiv";
+import MotionTag from "./MotionTag";
 import { slideInFromRight } from "../utils/motion";
 import { Send } from "lucide-react";
 import { zodResolver } from "@hookform/resolvers/zod";
@@ -89,7 +89,8 @@ export default function ContactForm() {
     }
 
     return (
-        <MotionDiv
+        <MotionTag
+            tag="div"
             variants={slideInFromRight(1.4)}
             initial="hidden"
             animate="visible"
@@ -173,6 +174,6 @@ export default function ContactForm() {
                     </form>
                 </Form>
             </section>
-        </MotionDiv>
+        </MotionTag>
     );
 }

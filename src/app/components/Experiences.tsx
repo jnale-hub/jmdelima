@@ -1,12 +1,13 @@
 import { siteConfig } from "@/app/config";
 import SectionLabel from "./SectionLabel";
 import ExperienceCard from "./ExperienceCard";
-import MotionDiv from "./MotionDiv";
+import MotionTag from "./MotionTag";
 import { slideInFromRight } from "../utils/motion";
 
 export default function Experiences() {
     return (
-        <MotionDiv
+        <MotionTag
+            tag="div"   
             variants={slideInFromRight(1.2)}
             initial="hidden"
             animate="visible"
@@ -25,6 +26,6 @@ export default function Experiences() {
                     )}
                 </div>
             </section>
-        </MotionDiv>
+        </MotionTag>
     );
 }

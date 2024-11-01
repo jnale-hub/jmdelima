@@ -4,7 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { siteConfig } from "../config";
 import { slideInFromLeft, slideInFromTop } from "../utils/motion";
-import MotionDiv from "./MotionDiv";
+import MotionTag from "./MotionTag";
 
 const gradients = [
     "radial-gradient(transparent, transparent, #A07CFE, #FE8FB5, #FFBE7B, transparent, transparent)",
@@ -27,7 +27,8 @@ export default function HireMeButton({ isSticky }: TProps) {
     }
     
     return (
-        <MotionDiv
+        <MotionTag
+            tag="div"
             variants={isMobile ? slideInFromTop(1) : slideInFromLeft(1)}
             initial="hidden"
             animate="visible"
@@ -65,6 +66,6 @@ export default function HireMeButton({ isSticky }: TProps) {
                     </button>
                 </div>
             </Link>
-        </MotionDiv>
+        </MotionTag>
     );
 }

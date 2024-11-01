@@ -1,4 +1,4 @@
-import MotionDiv from "./MotionDiv";
+import MotionTag from "./MotionTag";
 import { slideInFromRight } from "../utils/motion";
 import SectionLabel from "./SectionLabel";
 import BlogList from "./BlogList";
@@ -6,7 +6,8 @@ import { TPost } from "../utils/types";
 
 export default function HomepageBlogs({blogs}: {blogs: TPost[]}) {
     return (
-        <MotionDiv
+        <MotionTag
+            tag="div"
             variants={slideInFromRight(1.2)}
             initial="hidden"
             animate="visible"
@@ -18,7 +19,7 @@ export default function HomepageBlogs({blogs}: {blogs: TPost[]}) {
                 <SectionLabel label="BLOGS" className="lg:pl-3" />
                 <BlogList blogs={blogs} isHome/>
             </section>
-        </MotionDiv>
+        </MotionTag>
     );
 }
 

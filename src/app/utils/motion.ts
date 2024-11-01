@@ -5,7 +5,7 @@ export function slideInFromLeft(delay: number) {
             x: 0,
             opacity: 1,
             transition: {
-                delay: delay,
+                delay: 0,
                 duration: 0.5,
             },
         },
@@ -19,7 +19,7 @@ export function slideInFromRight(delay: number) {
             x: 0,
             opacity: 1,
             transition: {
-                delay: delay,
+                delay: 0,
                 duration: 0.5,
             },
         },
@@ -33,7 +33,7 @@ export function slideInFromTop(delay: number) {
             y: 0,
             opacity: 1,
             transition: {
-                delay: delay,
+                delay: 0,
                 duration: 0.5,
             },
         },

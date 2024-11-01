@@ -3,7 +3,7 @@
 import { useEffect, useRef } from "react";
 import Typed from "typed.js";
 import { slideInFromLeft, slideInFromTop } from "../utils/motion";
-import MotionDiv from "./MotionDiv";
+import MotionTag from "./MotionTag";
 
 type TProps = {
     taglines: string[];
@@ -33,7 +33,8 @@ export default function DynamicTagline({ taglines, className }: TProps) {
     }, [taglineRef]);
 
     return (
-        <MotionDiv
+        <MotionTag
+            tag="div"
             variants={isMobile ? slideInFromTop(0.8) : slideInFromLeft(0.8)}
             initial="hidden"
             animate="visible"
@@ -42,6 +43,6 @@ export default function DynamicTagline({ taglines, className }: TProps) {
             <div className={className}>
                 <span ref={taglineRef} />
             </div>
-        </MotionDiv>
+        </MotionTag>
     );
 }
