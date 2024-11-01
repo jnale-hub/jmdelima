@@ -30,6 +30,7 @@ import {
     SiDocker,
     SiDrizzle,
     SiMui,
+    SiGit,
 } from "react-icons/si";
 import { GrGraphQl } from "react-icons/gr";
 import { TbApi, TbBrandReactNative } from "react-icons/tb";
@@ -278,9 +279,9 @@ export const siteConfig = {
                     description: "Typed Javascript",
                 },
                 {
-                    name: "Shadcn/UI",
-                    icon: <SiShadcnui className="text-[#FFF]" />,
-                    description: "A UI component library",
+                    name: "Git",
+                    icon: <SiGit className="text-[#F05032]" />,
+                    description: "A version control system",
                 },
                 {
                     name: "Prisma",
@@ -373,8 +374,8 @@ export const siteConfig = {
                     icon: <SiDocker className="text-[#2496ED]" />,
                 },
                 {
-                    name: "Material-UI",
-                    icon: <SiMui className="text-[#0081CB]" />,
+                    name: "Shadcn/UI",
+                    icon: <SiShadcnui className="text-[#FFF]" />,
                 },
                 {
                     name: "Drizzle",
