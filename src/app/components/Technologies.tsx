@@ -42,18 +42,28 @@ export default function Technologies() {
                         })}
                     </div>
                 ) : (
-                    <div className="w-full grid grid-cols-7 gap-2">
-                        {allTechnologies.map((technology, index) => {
-                            return (
-                                <TechnologyItem
-                                    key={index}
-                                    technology={technology}
-                                />
-                            );
-                        })}
-                    </div>
+                    <>
+                        <div className="w-full grid grid-cols-7 gap-2">
+                            {allTechnologies.map((technology, index) => {
+                                return (
+                                    <TechnologyItem
+                                        key={index}
+                                        technology={technology}
+                                    />
+                                );
+                            })}
+                        </div>
+                        <div className="w-full flex justify-center mt-4 text-center">
+                            <p className="text-[9px] italic text-slate-350 leading-normal">
+                                Disclaimer: This list contains all the technologies that I have worked with in the past. <br></br>
+                                Not necessarily the technologies that I am most comfortable with.
+                            </p>
+                        </div>
+                    </>
                 )}
-                <div className="w-full flex justify-center items-center gap-4 mt-4 text-[10px]">
+                <div
+                    className={`w-full flex justify-center items-center gap-4 ${selectedCategory === Categories.MAIN ? "mt-4" : ""} text-[10px]`}
+                >
                     <button
                         className={`hover:text-white transition ${
                             selectedCategory === Categories.MAIN
