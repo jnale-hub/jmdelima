@@ -20,7 +20,7 @@ export default function BlogListItem({
             } p-3 flex justify-between rounded-md lg:hover:bg-[rgb(255,255,255,0.06)] transition-colors duration-300 group border-[rgb(255,255,255,0.02)]`}
         >
             <div className="lg:flex flex-wrap justify-between items-center">
-                <div className="flex items-center group-hover:text-pink-500 transition-colors duration-300 lg:mb-1 text-slate-300 w-full">
+                <div className="flex items-center group-hover:text-orange-500 transition-colors duration-300 lg:mb-1 text-slate-300 w-full">
                     <div className="lg:max-w-[90%]">
                         <h3 className="text-[13px] font-bold">
                             {blog.title.rendered}
