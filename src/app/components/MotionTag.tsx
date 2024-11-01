@@ -28,33 +28,46 @@ export default function MotionTag({
     transition = { duration: 0.3 },
     ...props
 }: TProps) {
-    const ref = useRef(null);
     const isMobile = useIsMobile();
+    const ref = useRef(null);
     const isInView = useInView(ref, {
         once,
         margin: "-150px",
     });
 
-    // If on mobile, render without animation
-    if (isMobile) {
-        const Component = tag as keyof JSX.IntrinsicElements;
-        return <Component className={className} {...props}>{children}</Component>;
-    }
-
-    const MotionComponent = motion[tag];
-
     return (
-        <MotionComponent
-            ref={ref}
-            variants={variants}
-            initial={initial}
-            animate={isInView ? animate : initial}
-            transition={transition}
-            className={className}
-            viewport={{ once }}
-            {...props}
-        >
-            {children}
-        </MotionComponent>
+        <>
+            {tag === "div" ? (
+                <motion.div
+                    ref={ref}
+                    variants={variants}
+                    initial={!isMobile ? initial : "visible"}
+                    animate={isInView ? animate : initial}
+                    transition={transition}
+                    className={className}
+                >
+                    {children}
+                </motion.div>
+            ) : (
+                <motion.h1
+                    ref={ref}
+                    variants={variants}
+                    initial={!isMobile ? initial : "visible"}
+                    animate={isInView ? animate : initial}
+                    transition={transition}
+                    className={className}
+                >
+                    {children}
+                </motion.h1>
+            )}
+        </>
     );
 }
+
+// ref={ref}
+// variants={variants}
+// initial={initial}
+// animate={isInView ? animate : initial}
+// transition={transition}
+// className={className}
+// viewport={{ once }}
