@@ -14,7 +14,7 @@ const config: Config = {
   			foreground: 'rgb(255,255,255)',
         slate: {
           // 350: 'rgb(163,160,185)',
-          350: 'hsl(214.14deg 22.31% 80%)' 
+          350: 'rgb(175.5,188,204.5)'
         }
   		},
   		borderRadius: {
