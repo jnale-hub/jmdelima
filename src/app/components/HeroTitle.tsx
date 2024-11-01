@@ -33,7 +33,7 @@ export default function HeroTitle() {
                 variants={isMobile ? slideInFromTop(0.6) : slideInFromLeft(0.6)}
                 initial="hidden"
                 animate="visible"
-                className="text-4xl sm:text-5xl lg:text-5xl 2xl:text-6xl font-bold text-center lg:text-start"
+                className="text-4xl sm:text-5xl lg:text-[2.75rem] xl:text-5xl 1640:text-[3.25rem] font-bold text-center lg:text-start"
             >
                 Delivering
                 <span className="gradient-accent"> the best </span>
@@ -43,7 +43,7 @@ export default function HeroTitle() {
                 variants={isMobile ? slideInFromTop(0.7) : slideInFromLeft(0.7)}
                 initial="hidden"
                 animate="visible"
-                className="text-4xl sm:text-5xl lg:text-5xl 2xl:text-6xl font-bold text-center lg:text-start mb-2"
+                className="text-4xl sm:text-5xl lg:text-[2.75rem] xl:text-5xl 1640:text-[3.25rem] font-bold text-center lg:text-start mb-2"
             >
                 in design and code.
             </MotionTag>

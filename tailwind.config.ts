@@ -21,7 +21,10 @@ const config: Config = {
   			lg: 'var(--radius)',
   			md: 'calc(var(--radius) - 2px)',
   			sm: 'calc(var(--radius) - 4px)'
-  		}
+  		},
+      screens: {
+        '1640': '1640px',
+      }
   	}
   },
   plugins: [require("tailwindcss-animate")],
