@@ -14,8 +14,8 @@ export default function HeroTitle() {
         <div>
             <MotionTag
                 tag="div"
-                variants={isMobile ? slideInFromTop(0.5) : slideInFromLeft(0.5)}
-                initial="hidden"
+                variants={slideInFromLeft(0.5)}
+                initial={isMobile ? 'visible' : "hidden"}
                 animate="visible"
                 className="text-lg sm:text-xl md:text-2xl font-medium flex items-center w-full justify-center lg:justify-start"
             >
@@ -30,8 +30,8 @@ export default function HeroTitle() {
             </MotionTag>
             <MotionTag
                 tag="h1"
-                variants={isMobile ? slideInFromTop(0.6) : slideInFromLeft(0.6)}
-                initial="hidden"
+                variants={slideInFromLeft(0.6)}
+                initial={isMobile ? 'visible' : "hidden"}
                 animate="visible"
                 className="text-4xl sm:text-5xl lg:text-[2.75rem] xl:text-5xl 1640:text-[3.25rem] font-bold text-center lg:text-start"
             >
