@@ -2,7 +2,6 @@ import MotionTag from './MotionTag';
 import { slideInFromRight } from '../utils/motion';
 import SectionLabel from './SectionLabel';
 import BlogList from './BlogList';
-import { TPost } from '../utils/types';
 import Link from 'next/link';
 
 export default async function HomepageBlogs() {
