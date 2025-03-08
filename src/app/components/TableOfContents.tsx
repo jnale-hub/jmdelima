@@ -1,10 +1,10 @@
 'use client';
 
 import Link from 'next/link';
-import { siteConfig } from '../config';
 import { useState, useEffect, useRef } from 'react';
 import { slideInFromLeft } from '../utils/motion';
 import MotionTag from './MotionTag';
+import { DATA } from '@/data/resume';
 
 export default function TableOfContents() {
   const [activeSection, setActiveSection] = useState<string | null>(null);
@@ -24,7 +24,7 @@ export default function TableOfContents() {
       }
     };
 
-    siteConfig.sections.tableOfContents.forEach((section) => {
+    DATA.tableOfContents.forEach((section) => {
       const element = document.getElementById(section.id);
       if (element) {
         const observer = new IntersectionObserver(observerCallback, {
@@ -69,7 +69,7 @@ export default function TableOfContents() {
       animate="visible"
       className="w-full hidden lg:block"
     >
-      {siteConfig.sections.tableOfContents.map((section, index) => (
+      {DATA.tableOfContents.map((section, index) => (
         <div key={index} className="flex items-center mb-4">
           <Link
             href={`#${section.id}`}
