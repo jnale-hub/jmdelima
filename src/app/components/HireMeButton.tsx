@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { siteConfig } from '../config';
 import { slideInFromLeft, slideInFromTop } from '../utils/motion';
 import MotionTag from './MotionTag';
 import { DATA } from '@/data/resume';
