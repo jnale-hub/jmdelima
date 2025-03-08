@@ -1,5 +1,5 @@
-import BlogList from "@/app/components/BlogList";
-import { getBlogPosts } from "@/data/blog";
+import BlogList from '@/app/components/BlogList';
+import { getBlogPosts } from '@/data/blog';
 export default async function BlogPage() {
   const posts = await getBlogPosts();
 
