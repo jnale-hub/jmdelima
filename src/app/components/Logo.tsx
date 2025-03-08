@@ -1,10 +1,16 @@
-import Link from "next/link";
-import Image from "next/image";
+import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Logo() {
-    return (
-        <Link className="flex items-center" href="/">
-            <Image className="w-48 mr-2" src="/horizontal-logo.png" alt="Alvin Chang" width={1100} height={300} />
-        </Link>
-    )
+  return (
+    <Link className="flex items-center" href="/">
+      <Image
+        className="mr-2 size-12 p-2"
+        src="/favicon.svg"
+        alt="JM logo"
+        width={300}
+        height={300}
+      />
+    </Link>
+  );
 }
