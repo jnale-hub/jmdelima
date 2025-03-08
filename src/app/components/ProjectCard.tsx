@@ -54,6 +54,7 @@ export default function ProjectCard({
                 href={link}
                 target="_blank"
                 className="text-slate-350 !text-[11px] lg:text-sm lg:px-2 block hover:text-pink-500 transition-all duration-300"
+                title="Visit project link"
               >
                 <FaLink
                   size={16}
@@ -66,6 +67,7 @@ export default function ProjectCard({
                 href={repoLink}
                 target="_blank"
                 className="text-slate-350 !text-[11px] lg:text-sm lg:px-2 block hover:text-pink-500 transition-all duration-300"
+                title="Visit project link"
               >
                 <FaGithub
                   size={16}
