@@ -277,4 +277,30 @@ Engaged with a vibrant community of like-minded learners.`,
       image: '/projects/crossword-poster.png',
     },
   ],
+  tableOfContents: [
+    {
+      id: 'about-me',
+      label: 'ABOUT ME',
+    },
+    {
+      id: 'experiences',
+      label: 'EXPERIENCES',
+    },
+    {
+      id: 'projects',
+      label: 'PROJECTS',
+    },
+    {
+      id: 'technologies',
+      label: 'TECHNOLOGIES',
+    },
+    {
+      id: 'blogs',
+      label: 'BLOGS',
+    },
+    {
+      id: 'contact',
+      label: 'CONTACT',
+    },
+  ],
 };
