@@ -58,7 +58,7 @@ export default function RootLayout({
         <link rel="manifest" href="/site.webmanifest" />
       </head>
       <body
-        className={`${inter.className} antialiased bg-slate-950 text-slate-100 overflow-x-hidden`}
+        className={`${inter.className} antialiased bg-slate-950 text-slate-100`}
       >
         <StarsCanvas />
         <Glow />
