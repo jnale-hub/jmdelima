@@ -19,7 +19,7 @@ export default async function Home() {
   const posts = await getBlogPosts();
 
   return (
-    <main className="w-full min-h-screen px-4 sm:px-20 xl:px-40 grid lg:grid-cols-2 gap-x-4">
+    <main className="w-full min-h-screen px-4 sm:px-20 xl:px-40 grid lg:grid-cols-2 gap-x-4 max-lg:overflow-x-hidden">
       <header className="lg:h-[100dvh] lg:sticky top-0 pt-40 lg:pb-40 flex flex-col lg:justify-between">
         <div>
           <HeroTitle />
