@@ -70,5 +70,4 @@ For any inquiries, please contact John Mark Delima at delimajohnmark14@gmail.com
 
 If you like this project, please consider giving it a star on GitHub! ⭐
 
-
 - **Attribution Required**: If you use this template for commercial purposes, attribution to Alvin Chang (https://alvinchang.dev) is required.
