@@ -2,7 +2,8 @@
 
 import MotionTag from './MotionTag';
 import { slideInFromRight } from '../utils/motion';
-import { Link, Send } from 'lucide-react';
+import { Send } from 'lucide-react';
+import Link from 'next/link';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useForm } from 'react-hook-form';
 import * as z from 'zod';
@@ -154,7 +155,7 @@ export default function ContactForm() {
               </FormItem>
             )}
           />
-          <div className="col-span-2 flex justify-start">
+          <div className="col-span-2 flex items-center">
             {/* <Button
                                 type="submit"
                                 className="bg-gradient-to-r from-orange-600 to-pink-600 hover:from-orange-500 hover:to-pink-500 dark:text-white text-xs px-4 py-2 rounded-sm w-full"
@@ -165,8 +166,7 @@ export default function ContactForm() {
                             </Button> */}
             <Link
               href="mailto:delimajohnmark14@gmail.com"
-              target="_blank"
-              className="bg-gradient-to-r from-orange-600 to-pink-600 hover:from-orange-500 hover:to-pink-500 dark:text-white text-xs px-4 py-2 rounded-sm w-full"
+              className="bg-gradient-to-r from-orange-600 to-pink-600 hover:from-orange-500 hover:to-pink-500 dark:text-white text-xs px-4 py-2 rounded-sm w-full flex items-center justify-center"
             >
               {isLoading ? 'SENDING...' : 'SEND MESSAGE'}
               <Send className="ml-2 h-4 w-4" />
