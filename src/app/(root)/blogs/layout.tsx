@@ -4,24 +4,24 @@ import SocialIcons from '@/app/components/SocialIcons';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Blogs - Alvin Chang',
-  description: "Alvin Chang's Blog, fragments of my imagination",
+  title: 'Blogs - John Mark Delima',
+  description: "A simple blog site where I share my thoughts and experiences",
   keywords:
-    'Alvin Chang, blog, nextjs, react, javascript, typescript, web development, programming',
+    'John Mark Delima, blog, nextjs, react, javascript, typescript, web development, programming',
   alternates: {
-    canonical: 'https://alvinchang.dev/blogs',
+    canonical: 'https://portfolio-xi-nine-64.vercel.app/blogs',
   },
   openGraph: {
-    title: 'Blogs - Alvin Chang',
-    description: "Alvin Chang's Blog, fragments of my imagination",
-    url: 'https://alvinchang.dev/blogs',
+    title: 'Blogs - John Mark Delima',
+    description: "A simple blog site where I share my thoughts and experiences",
+    url: 'https://portfolio-xi-nine-64.vercel.app/blogs',
     type: 'website',
     images: [
       {
         url: '/horizontal-logo.png',
         width: 1100,
         height: 300,
-        alt: 'Alvin Chang Portfolio Logo',
+        alt: 'John Mark Delima Portfolio Logo',
       },
     ],
   },
