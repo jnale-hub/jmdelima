@@ -18,7 +18,7 @@ export default async function BlogList() {
         })
         .map((post) => (
           <Link
-            href={`/blog/${post.slug}`}
+            href={`/blogs/${post.slug}`}
             className="w-full  pl-0 lg:pl-3
                  p-3 flex justify-between rounded-md lg:hover:bg-[rgb(255,255,255,0.06)] transition-colors duration-300 group border-[rgb(255,255,255,0.02)]"
           >

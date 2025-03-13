@@ -16,7 +16,7 @@ export default async function HomepageBlogs() {
         id="blogs"
         className="w-full flex flex-wrap justify-center lg:justify-start mb-8 lg:mb-12"
       >
-        <Link href="/blog">
+        <Link href="/blogs">
           <SectionLabel label="BLOGS" />
         </Link>
         <BlogList />

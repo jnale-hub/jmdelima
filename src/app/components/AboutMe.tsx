@@ -32,7 +32,7 @@ export default function AboutMe() {
       </p>
       <p>
         When I’m not coding, I enjoy{' '}
-        <Link href="/blog/my-beloved-strawberry-patch">
+        <Link href="/blogs/my-beloved-strawberry-patch">
           <strong>gardening</strong>
         </Link>
         , especially tending to my strawberry patch 🪴🍓.
