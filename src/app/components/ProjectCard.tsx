@@ -53,7 +53,7 @@ export default function ProjectCard({
               <Link
                 href={link}
                 target="_blank"
-                className="text-slate-350 !text-[11px] lg:text-sm lg:px-2 block hover:text-pink-500 transition-all duration-300"
+                className="text-slate-350 text-[11px]! lg:text-sm lg:px-2 block hover:text-pink-500 transition-all duration-300"
                 title="Visit project link"
               >
                 <FaLink
@@ -66,7 +66,7 @@ export default function ProjectCard({
               <Link
                 href={repoLink}
                 target="_blank"
-                className="text-slate-350 !text-[11px] lg:text-sm lg:px-2 block hover:text-pink-500 transition-all duration-300"
+                className="text-slate-350 text-[11px]! lg:text-sm lg:px-2 block hover:text-pink-500 transition-all duration-300"
                 title="Visit project link"
               >
                 <FaGithub
@@ -77,7 +77,7 @@ export default function ProjectCard({
             )}
           </div>
         </div>
-        <p className="text-slate-350 text-xs lg:text-sm lg:px-2 !mb-0">
+        <p className="text-slate-350 text-xs lg:text-sm lg:px-2 mb-0!">
           {description}
         </p>
         <ProjectTechStack technologies={technologies} />

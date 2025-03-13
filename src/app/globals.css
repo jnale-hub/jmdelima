@@ -1,6 +1,47 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme {
+  --color-background: rgb(3, 0, 15);
+  --color-foreground: rgb(255, 255, 255);
+
+  --color-slate-350: rgb(175.5, 188, 204.5);
+
+  --breakpoint-1640: 1640px;
+
+  --animate-shiny-text: shiny-text 8s infinite;
+
+  @keyframes shiny-text {
+    0%,
+    90%,
+    100% {
+      background-position: calc(-100% - var(--shiny-width)) 0;
+    }
+    30%,
+    60% {
+      background-position: calc(100% + var(--shiny-width)) 0;
+    }
+  }
+}
+
+/*
+  The default border color has changed to `currentColor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
 
 .gradient-accent {
   @apply text-transparent bg-clip-text bg-indigo-50;
@@ -24,7 +65,7 @@ html {
 }
 
 .blog-list p {
-  @apply !line-clamp-2 !text-slate-350 !leading-normal !mb-0;
+  @apply line-clamp-2! text-slate-350! leading-normal! mb-0!;
 }
 
 /* Markdown */
@@ -61,7 +102,7 @@ html {
 }
 
 .article-content pre code {
-  @apply !p-4 rounded-lg font-mono text-xs overflow-auto block;
+  @apply p-4! rounded-lg font-mono text-xs overflow-auto block;
 }
 
 .article-content hr {
@@ -73,7 +114,7 @@ html {
 }
 
 .article-content figure {
-  @apply rounded-sm max-w-[80%] w-fit mx-auto relative mb-2;
+  @apply rounded-xs max-w-[80%] w-fit mx-auto relative mb-2;
 }
 
 .article-content img {
@@ -85,7 +126,7 @@ html {
 }
 
 .article-content .invert img {
-  @apply !invert;
+  @apply invert!;
 }
 
 ::-webkit-scrollbar {

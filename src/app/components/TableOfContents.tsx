@@ -81,7 +81,7 @@ export default function TableOfContents() {
             <hr
               className={`w-8 h-[1px] transition-all duration-300 ${
                 activeSection === section.id
-                  ? '!w-16 bg-slate-100'
+                  ? 'w-16! bg-slate-100'
                   : 'bg-slate-350 group-hover:w-16'
               }`}
             />

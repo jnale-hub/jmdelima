@@ -111,7 +111,7 @@ export default function ContactForm() {
                   <Input
                     placeholder={DATA.name}
                     {...field}
-                    className="bg-[rgba(255,255,255,0.01)] border-[rgba(255,255,255,0.1)] text-white text-xs p-2 rounded-sm focus:ring-orange-500"
+                    className="bg-[rgba(255,255,255,0.01)] border-[rgba(255,255,255,0.1)] text-white text-xs p-2 rounded-xs focus:ring-orange-500"
                   />
                 </FormControl>
                 <FormMessage className="text-xs" />
@@ -128,7 +128,7 @@ export default function ContactForm() {
                   <Input
                     placeholder={DATA.contact.email}
                     {...field}
-                    className="bg-[rgba(255,255,255,0.01)] border-[rgba(255,255,255,0.1)] text-white text-xs p-2 rounded-sm focus:ring-orange-500"
+                    className="bg-[rgba(255,255,255,0.01)] border-[rgba(255,255,255,0.1)] text-white text-xs p-2 rounded-xs focus:ring-orange-500"
                   />
                 </FormControl>
                 <FormMessage className="text-xs" />
@@ -147,7 +147,7 @@ export default function ContactForm() {
                   <Textarea
                     placeholder="I would like to request a quote for a website design..."
                     {...field}
-                    className="bg-[rgba(255,255,255,0.01)] border-[rgba(255,255,255,0.1)] text-white text-xs p-2 rounded-sm focus:ring-orange-500 w-full"
+                    className="bg-[rgba(255,255,255,0.01)] border-[rgba(255,255,255,0.1)] text-white text-xs p-2 rounded-xs focus:ring-orange-500 w-full"
                     rows={4}
                   />
                 </FormControl>
@@ -158,7 +158,7 @@ export default function ContactForm() {
           <div className="col-span-2 flex items-center">
             {/* <Button
                                 type="submit"
-                                className="bg-gradient-to-r from-orange-600 to-pink-600 hover:from-orange-500 hover:to-pink-500 dark:text-white text-xs px-4 py-2 rounded-sm w-full"
+                                className="bg-linear-to-r from-orange-600 to-pink-600 hover:from-orange-500 hover:to-pink-500 dark:text-white text-xs px-4 py-2 rounded-xs w-full"
                                 disabled={isLoading}
                             >
                                 {isLoading ? "SENDING..." : "SEND MESSAGE"}
@@ -166,7 +166,7 @@ export default function ContactForm() {
                             </Button> */}
             <Link
               href="mailto:delimajohnmark14@gmail.com"
-              className="bg-gradient-to-r from-orange-600 to-pink-600 hover:from-orange-500 hover:to-pink-500 dark:text-white text-xs px-4 py-2 rounded-sm w-full flex items-center justify-center"
+              className="bg-linear-to-r from-orange-600 to-pink-600 hover:from-orange-500 hover:to-pink-500 dark:text-white text-xs px-4 py-2 rounded-xs w-full flex items-center justify-center"
             >
               {isLoading ? 'SENDING...' : 'SEND MESSAGE'}
               <Send className="ml-2 h-4 w-4" />

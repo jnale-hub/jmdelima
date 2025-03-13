@@ -18,7 +18,7 @@ export default function Footer({ isSticky, noAnimate }: TProps) {
       initial={noAnimate ? 'visible' : 'hidden'}
       animate="visible"
       className={`text-center lg:text-left text-slate-350 text-[9px] w-full mt-8 ${
-        noAnimate && '!block lg:!block p-2 lg:!text-center'
+        noAnimate && 'block! lg:block! p-2 lg:text-center!'
       } ${isSticky ? 'hidden lg:block' : 'lg:hidden'}`}
     >
       <p className="mb-0 text-[8px]">

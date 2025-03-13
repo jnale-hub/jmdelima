@@ -10,7 +10,7 @@ export default function ProjectTechStack({ technologies }: TProps) {
       {technologies.map((technology, index) => (
         <div
           key={index}
-          className="flex items-center gap-1 p-1 px-2 bg-slate-600/50 rounded-sm"
+          className="flex items-center gap-1 p-1 px-2 bg-slate-600/50 rounded-xs"
         >
           <span className="text-xs text-slate-100">{technology.name}</span>
         </div>

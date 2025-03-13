@@ -35,7 +35,7 @@ export default function HireMeButton({ isSticky }: TProps) {
       className="flex justify-center lg:justify-start lg:py-6"
     >
       <Link href={'#contact'} className={`${!isSticky && 'lg:hidden'} `}>
-        <div className="relative w-28 h-9 lg:w-32 lg:h-10 overflow-hidden p-[1px] rounded-sm hover:scale-110 transition-all duration-300 ease-in-out">
+        <div className="relative w-28 h-9 lg:w-32 lg:h-10 overflow-hidden p-[1px] rounded-xs hover:scale-110 transition-all duration-300 ease-in-out">
           <motion.div
             animate={{
               background: gradients,
@@ -53,7 +53,7 @@ export default function HireMeButton({ isSticky }: TProps) {
                 ease: 'linear',
               },
             }}
-            className="flex justify-center items-center absolute inset-0 w-full h-full blur-sm"
+            className="flex justify-center items-center absolute inset-0 w-full h-full blur-xs"
           ></motion.div>
           <button
             className="text-white text-[10px] lg:text-[11px] border border-[rgba(255,255,255,0.3)] font-bold tracking-widest bg-background
