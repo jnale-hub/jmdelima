@@ -9,12 +9,12 @@ export const metadata: Metadata = {
   keywords:
     'John Mark Delima, blog, nextjs, react, javascript, typescript, web development, programming',
   alternates: {
-    canonical: 'https://portfolio-xi-nine-64.vercel.app/blogs',
+    canonical: 'https://jmdelima.vercel.app//blogs',
   },
   openGraph: {
     title: 'Blogs - John Mark Delima',
     description: "A simple blog site where I share my thoughts and experiences",
-    url: 'https://portfolio-xi-nine-64.vercel.app/blogs',
+    url: 'https://jmdelima.vercel.app//blogs',
     type: 'website',
     images: [
       {

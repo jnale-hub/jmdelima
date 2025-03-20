@@ -42,7 +42,7 @@ export const DATA = {
     'JavaScript',
     'TypeScript',
   ],
-  url: 'https://jnale-hub.github.io',
+  url: 'https://jmdelima.vercel.app/',
   location: 'Camarines Sur, Philippines',
   titles: ['Full-Stack Developer', 'Python Developer', 'AI Engineer'],
   taglines: [
@@ -183,7 +183,7 @@ Engaged with a vibrant community of like-minded learners.`,
       description:
         'A simple yet elegant application to search and explore movie information using the TMDB API.',
       logo: '/projects/movie-finder.png',
-      repoLink: 'https://github.com/auroradream04/genzify-app',
+      repoLink: 'https://github.com/jnale-hub/movie-finder-nextjs',
       technologies: [
         {
           icon: <RiNextjsFill className="text-[#FFF]" />,
