@@ -54,7 +54,7 @@ export const ResumeCard = ({
             <h3 className="text-slate-200 text-sm font-medium">
               {organization}
             </h3>
-            <p className="text-slate-400 text-[11px] lg:text-xs leading-none">
+            <p className="text-slate-400 text-[11px] lg:text-xs leading-none mb-0!">
               {period}
             </p>
           </div>
