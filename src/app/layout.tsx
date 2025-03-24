@@ -56,6 +56,7 @@ export default function RootLayout({
     <html lang="en" className="dark">
       <head>
         <link rel="manifest" href="/site.webmanifest" />
+        <meta name="google-site-verification" content="vcwLgcpCStHhb0GBjOCdddYSpXhNb97iyODsbCxzU9o" />
       </head>
       <body
         className={`${inter.className} antialiased bg-slate-950 text-slate-100`}
