@@ -56,7 +56,7 @@ export const DATA = {
       description: `Developed and maintained dynamic websites and web applications using React JS, Next.js, TypeScript, Tailwind, Django, Echo (Golang Framework), and Docker. 
         Designed and implemented a chatbot prototype leveraging OpenAI’s Assistant API. 
         Built and optimized system backends with Django’s DRF, delivering high-performance, scalable RESTful APIs. 
-        Designed and managed the HubSpot CRM integration for the company blog.`,
+        Designed and managed the HubSpot CRM integration for the company blog, enhancing lead capture workflows and improving SEO through optimized metadata and content tagging.`,
       logo: '/dance-vision.svg',
     },
   ],
