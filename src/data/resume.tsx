@@ -153,7 +153,7 @@ export const DATA = {
         'https://cs50.harvard.edu/certificates/b502e89e-7f59-45b5-a360-7c7596e87b43',
       period: 'Oct 2024',
       logo: '/harvard.png',
-      description: `Acquired concepts and algorithms at the foundation of modern artificial intelligencen including neural networks, computer vision, and NLP.`,
+      description: `Acquired concepts and algorithms at the foundation of modern artificial intelligence including neural networks, computer vision, and NLP.`,
     },
     {
       name: "CS50's Web Programming with Python and JavaScript",
