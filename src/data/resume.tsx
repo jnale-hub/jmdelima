@@ -3,8 +3,6 @@ import { FaMattressPillow } from 'react-icons/fa6';
 import { IoIosMail } from 'react-icons/io';
 import { MdJavascript } from 'react-icons/md';
 import {
-  RiMovie2AiFill,
-  RiNewspaperFill,
   RiNextjsFill,
   RiTailwindCssFill,
 } from 'react-icons/ri';
@@ -17,7 +15,6 @@ import {
   SiNodedotjs,
   SiPython,
   SiReact,
-  SiSqlite,
   SiTypescript,
 } from 'react-icons/si';
 
@@ -119,7 +116,7 @@ export const DATA = {
   ],
   contact: {
     email: 'delimajohnmark14@gmail.com',
-    tel: '09304012363',
+    tel: '09764332778',
     socials: [
       {
         icon: <FaGithub />,
@@ -186,24 +183,57 @@ Engaged with a vibrant community of like-minded learners.`,
       repoLink: 'https://github.com/jnale-hub/movie-finder-nextjs',
       technologies: [
         {
-          icon: <RiNextjsFill className="text-[#FFF]" />,
           name: 'Next.js',
         },
         {
-          icon: <RiTailwindCssFill className="text-[#06B6D4]" />,
           name: 'Tailwind CSS',
         },
         {
-          icon: <SiTypescript className="text-[#3178C6]" />,
           name: 'TypeScript',
         },
         {
-          icon: <RiMovie2AiFill />,
           name: 'TMDB API',
         },
       ],
       link: 'https://movie-finder-nextjs-coral.vercel.app/',
       image: '/projects/movie-poster.png',
+    },
+    {
+      title: 'Walwal Cards',
+      description:
+        'An interactive application that allows users to play with a collection of digital trading cards.',
+      logo: '/projects/walwalcards.png',
+      repoLink: 'https://github.com/jnale-hub/walwal-cards',
+      technologies: [
+        {
+          name: 'Expo',
+        },
+        {
+          name: 'TypeScript',
+        },
+      ],
+      link: 'https://walwalcards.xyz/',
+      image: '/projects/walwalcards-poster.png',
+    },
+    {
+      title: 'Waldas Simulation',
+      description:
+        'A satirical, educational simulation that visualizes the immense net worth of Philippine politicians by letting you "shop" with their funds.',
+      logo: '/projects/waldas.svg',
+      repoLink: 'https://github.com/jnale-hub/waldas-simulation',
+      technologies: [
+        {
+          name: 'Vite',
+        },
+        {
+          name: 'TypeScript',
+        },
+        {
+          name: 'TailwindCSS',
+        },
+      ],
+      link: 'https://waldas-simulation.vercel.app/',
+      image: '/projects/waldas-poster.png',
     },
     {
       title: 'Nexus Publication',
@@ -213,19 +243,15 @@ Engaged with a vibrant community of like-minded learners.`,
       repoLink: 'https://github.com/jnale-hub/Nexus-Publication-Capstone',
       technologies: [
         {
-          icon: <SiDjango />,
           name: 'Django',
         },
         {
-          icon: <RiNewspaperFill className="text-[#412991]" />,
           name: 'News.API',
         },
         {
-          icon: <FaBootstrap />,
           name: 'Bootstrap',
         },
         {
-          icon: <MdJavascript className="text-[#3178C6]" />,
           name: 'Javascript',
         },
       ],
@@ -240,19 +266,15 @@ Engaged with a vibrant community of like-minded learners.`,
       repoLink: 'https://github.com/jnale-hub/Auctions',
       technologies: [
         {
-          icon: <SiDjango />,
           name: 'Django',
         },
         {
-          icon: <FaBootstrap />,
           name: 'Bootstrap',
         },
         {
-          icon: <MdJavascript className="text-[#3178C6]" />,
           name: 'Javascript',
         },
         {
-          icon: <SiSqlite className="text-[#3178C6]" />,
           name: 'SQLite',
         },
       ],
@@ -266,11 +288,9 @@ Engaged with a vibrant community of like-minded learners.`,
       repoLink: 'https://github.com/jnale-hub/CrosswordAI',
       technologies: [
         {
-          icon: <FaPython />,
           name: 'Python',
         },
         {
-          icon: <FaMattressPillow />,
           name: 'Pillow',
         },
       ],
