@@ -10,7 +10,6 @@ type TProps = {
   logo: string;
   repoLink: string;
   technologies: {
-    icon: React.ReactNode;
     name: string;
   }[];
   link?: string;
