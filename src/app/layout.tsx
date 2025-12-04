@@ -3,6 +3,7 @@ import './globals.css';
 import StarsCanvas from './components/StarBackground';
 import Glow from './components/Glow';
 import { Inter } from 'next/font/google';
+import Script from 'next/script';
 import { Toaster } from 'sonner';
 import Plausible from './components/Plausible';
 import { DATA } from '@/data/resume';
@@ -61,6 +62,18 @@ export default function RootLayout({
       <body
         className={`${inter.className} antialiased bg-slate-950 text-slate-100`}
       >
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-5PS2D17HRL"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-5PS2D17HRL');
+          `}
+        </Script>
         <StarsCanvas />
         <Glow />
         <Plausible />
